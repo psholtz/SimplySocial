@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8642959E1700F14500EDA803 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8642959D1700F14500EDA803 /* MBProgressHUD.m */; };
+		864295A31700F1CD00EDA803 /* Saturn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 864295A21700F1CD00EDA803 /* Saturn1.jpg */; };
+		864295A41700F1CD00EDA803 /* Saturn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 864295A21700F1CD00EDA803 /* Saturn1.jpg */; };
+		864295A81700F74700EDA803 /* SimpleTwitterLoginViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864295A51700F74700EDA803 /* SimpleTwitterLoginViewController_iPhone5.xib */; };
+		864295A91700F74700EDA803 /* SimpleTwitterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 864295A71700F74700EDA803 /* SimpleTwitterRequest.m */; };
+		864295AD1700F76100EDA803 /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 864295AB1700F76100EDA803 /* OAuth.m */; };
+		864295B1170386D900EDA803 /* SimpleTwitterLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864295B0170386D800EDA803 /* SimpleTwitterLoginViewController_iPad.xib */; };
+		864295B317038EF400EDA803 /* SimplySocial.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 864295B217038EF400EDA803 /* SimplySocial.bundle */; };
+		8642CCD616FBC38E008F068E /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EF3B7316F182CF005DC72C /* NSString+URLEncoding.m */; };
+		8642CCD916FBCD18008F068E /* SimpleTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8642CCD816FBCD18008F068E /* SimpleTwitter.m */; };
+		8646240116E02B8F009F8E7F /* SimpleFacebook+AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 864623F116E02B8F009F8E7F /* SimpleFacebook+AccessToken.m */; };
+		8646240216E02B8F009F8E7F /* SimpleFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 864623F316E02B8F009F8E7F /* SimpleFacebook.m */; };
+		8646240316E02B8F009F8E7F /* SimpleFacebookRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 864623F516E02B8F009F8E7F /* SimpleFacebookRequest.m */; };
+		8646240416E02B8F009F8E7F /* SimpleFacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 864623F716E02B8F009F8E7F /* SimpleFacebookLoginViewController.m */; };
+		8646240516E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864623F816E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPad.xib */; };
+		8646240616E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 864623F916E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPhone5.xib */; };
+		8646240816E02B8F009F8E7F /* SimpleOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 864623FE16E02B8F009F8E7F /* SimpleOperation.m */; };
+		8646240916E02B8F009F8E7F /* SimpleQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646240016E02B8F009F8E7F /* SimpleQueue.m */; };
+		8646240A16E02C06009F8E7F /* SimpleOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 864623FE16E02B8F009F8E7F /* SimpleOperation.m */; };
+		8646240B16E02C0A009F8E7F /* SimpleQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646240016E02B8F009F8E7F /* SimpleQueue.m */; };
+		869D4B7916E127D900952C75 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D4B7616E127D900952C75 /* Icon.png */; };
+		869D4B7A16E127D900952C75 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D4B7716E127D900952C75 /* Icon@2x.png */; };
+		869D4B7B16E127D900952C75 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D4B7816E127D900952C75 /* Icon-72.png */; };
+		869D4B7D16E12A6500952C75 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D4B7C16E12A6500952C75 /* Icon-72@2x.png */; };
+		869DB40916DD3DA600B90E5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40816DD3DA600B90E5F /* UIKit.framework */; };
+		869DB40B16DD3DA600B90E5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40A16DD3DA600B90E5F /* Foundation.framework */; };
+		869DB40D16DD3DA600B90E5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40C16DD3DA600B90E5F /* CoreGraphics.framework */; };
+		869DB41316DD3DA600B90E5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 869DB41116DD3DA600B90E5F /* InfoPlist.strings */; };
+		869DB41516DD3DA600B90E5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 869DB41416DD3DA600B90E5F /* main.m */; };
+		869DB41916DD3DA600B90E5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 869DB41816DD3DA600B90E5F /* AppDelegate.m */; };
+		869DB41B16DD3DA600B90E5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 869DB41A16DD3DA600B90E5F /* Default.png */; };
+		869DB41D16DD3DA600B90E5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 869DB41C16DD3DA600B90E5F /* Default@2x.png */; };
+		869DB41F16DD3DA600B90E5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 869DB41E16DD3DA600B90E5F /* Default-568h@2x.png */; };
+		869DB42216DD3DA600B90E5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 869DB42116DD3DA600B90E5F /* ViewController.m */; };
+		869DB42516DD3DA600B90E5F /* ViewController_iPhone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869DB42316DD3DA600B90E5F /* ViewController_iPhone5.xib */; };
+		869DB42816DD3DA600B90E5F /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869DB42616DD3DA600B90E5F /* ViewController_iPad.xib */; };
+		86C66DB016E3E7E70018990E /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C66DAF16E3E7E70018990E /* Base64.m */; };
+		86C66DB116E406730018990E /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C66DAF16E3E7E70018990E /* Base64.m */; };
+		86CAC57E16FC0EFA00903651 /* SimpleTwitterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAC57D16FC0EFA00903651 /* SimpleTwitterLoginViewController.m */; };
+		86E65AA416DD664700A7125B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB42F16DD3DA600B90E5F /* SenTestingKit.framework */; };
+		86E65AA516DD664800A7125B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40816DD3DA600B90E5F /* UIKit.framework */; };
+		86E65AA616DD664800A7125B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40A16DD3DA600B90E5F /* Foundation.framework */; };
+		86E65AAC16DD664800A7125B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86E65AAA16DD664800A7125B /* InfoPlist.strings */; };
+		86E65AAF16DD664800A7125B /* SimplySocialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E65AAE16DD664800A7125B /* SimplySocialTests.m */; };
+		86EF3B7416F182CF005DC72C /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EF3B7316F182CF005DC72C /* NSString+URLEncoding.m */; };
+		86F73E5B170517F600C71434 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F73E5A170517F600C71434 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		86F73E5D1705183A00C71434 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F73E5C1705183A00C71434 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		86F73E61170602AB00C71434 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F73E60170602AB00C71434 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		86F73E6417063C6800C71434 /* SimpleTwitter+CompletionHandlers.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F73E6317063C6700C71434 /* SimpleTwitter+CompletionHandlers.m */; };
+		86F73E6717066F1600C71434 /* SimplySocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F73E6617066F1600C71434 /* SimplySocial.m */; };
+		86F73E6D1707ABEE00C71434 /* ViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F73E6B1707ABEE00C71434 /* ViewController_iPhone4.xib */; };
+		86F73E6F1707F67C00C71434 /* SimpleFacebookLoginViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F73E6E1707F67B00C71434 /* SimpleFacebookLoginViewController_iPhone4.xib */; };
+		86F73E711707FEF000C71434 /* SimpleTwitterLoginViewController_iPhone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F73E701707FEF000C71434 /* SimpleTwitterLoginViewController_iPhone4.xib */; };
+		86F73E741708D43E00C71434 /* chime.caff in Resources */ = {isa = PBXBuildFile; fileRef = 86F73E731708D43E00C71434 /* chime.caff */; };
+		86F73E761708D4EF00C71434 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F73E751708D4EE00C71434 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86E65AB916DD6BD100A7125B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869DB3FD16DD3DA600B90E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869DB40416DD3DA600B90E5F;
+			remoteInfo = SimplySocial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8642959C1700F14500EDA803 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		8642959D1700F14500EDA803 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		864295A21700F1CD00EDA803 /* Saturn1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Saturn1.jpg; path = Samples/Saturn1.jpg; sourceTree = "<group>"; };
+		864295A51700F74700EDA803 /* SimpleTwitterLoginViewController_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTwitterLoginViewController_iPhone5.xib; path = SimpleTwitter/SimpleTwitterLoginViewController_iPhone5.xib; sourceTree = "<group>"; };
+		864295A61700F74700EDA803 /* SimpleTwitterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTwitterRequest.h; path = SimpleTwitter/SimpleTwitterRequest.h; sourceTree = "<group>"; };
+		864295A71700F74700EDA803 /* SimpleTwitterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTwitterRequest.m; path = SimpleTwitter/SimpleTwitterRequest.m; sourceTree = "<group>"; };
+		864295AA1700F76100EDA803 /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth.h; path = SimpleTwitter/OAuth/OAuth.h; sourceTree = "<group>"; };
+		864295AB1700F76100EDA803 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth.m; path = SimpleTwitter/OAuth/OAuth.m; sourceTree = "<group>"; };
+		864295AC1700F76100EDA803 /* OAuthTwitterCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthTwitterCallbacks.h; path = SimpleTwitter/OAuth/OAuthTwitterCallbacks.h; sourceTree = "<group>"; };
+		864295B0170386D800EDA803 /* SimpleTwitterLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTwitterLoginViewController_iPad.xib; path = SimpleTwitter/SimpleTwitterLoginViewController_iPad.xib; sourceTree = "<group>"; };
+		864295B217038EF400EDA803 /* SimplySocial.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SimplySocial.bundle; sourceTree = "<group>"; };
+		8642CCD716FBCD18008F068E /* SimpleTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTwitter.h; path = SimpleTwitter/SimpleTwitter.h; sourceTree = "<group>"; };
+		8642CCD816FBCD18008F068E /* SimpleTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTwitter.m; path = SimpleTwitter/SimpleTwitter.m; sourceTree = "<group>"; };
+		864623F016E02B8F009F8E7F /* SimpleFacebook+AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SimpleFacebook+AccessToken.h"; sourceTree = "<group>"; };
+		864623F116E02B8F009F8E7F /* SimpleFacebook+AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SimpleFacebook+AccessToken.m"; sourceTree = "<group>"; };
+		864623F216E02B8F009F8E7F /* SimpleFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFacebook.h; sourceTree = "<group>"; };
+		864623F316E02B8F009F8E7F /* SimpleFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFacebook.m; sourceTree = "<group>"; };
+		864623F416E02B8F009F8E7F /* SimpleFacebookRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFacebookRequest.h; sourceTree = "<group>"; };
+		864623F516E02B8F009F8E7F /* SimpleFacebookRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFacebookRequest.m; sourceTree = "<group>"; };
+		864623F616E02B8F009F8E7F /* SimpleFacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFacebookLoginViewController.h; sourceTree = "<group>"; };
+		864623F716E02B8F009F8E7F /* SimpleFacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFacebookLoginViewController.m; sourceTree = "<group>"; };
+		864623F816E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFacebookLoginViewController_iPad.xib; sourceTree = "<group>"; };
+		864623F916E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPhone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFacebookLoginViewController_iPhone5.xib; sourceTree = "<group>"; };
+		864623FB16E02B8F009F8E7F /* SimpleHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleHeaders.h; sourceTree = "<group>"; };
+		864623FD16E02B8F009F8E7F /* SimpleOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleOperation.h; sourceTree = "<group>"; };
+		864623FE16E02B8F009F8E7F /* SimpleOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleOperation.m; sourceTree = "<group>"; };
+		864623FF16E02B8F009F8E7F /* SimpleQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleQueue.h; sourceTree = "<group>"; };
+		8646240016E02B8F009F8E7F /* SimpleQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleQueue.m; sourceTree = "<group>"; };
+		869D4B7616E127D900952C75 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		869D4B7716E127D900952C75 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		869D4B7816E127D900952C75 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		869D4B7C16E12A6500952C75 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		869DB40516DD3DA600B90E5F /* SimplySocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplySocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		869DB40816DD3DA600B90E5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		869DB40A16DD3DA600B90E5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		869DB40C16DD3DA600B90E5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		869DB41016DD3DA600B90E5F /* SimplySocial-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplySocial-Info.plist"; sourceTree = "<group>"; };
+		869DB41216DD3DA600B90E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		869DB41416DD3DA600B90E5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		869DB41616DD3DA600B90E5F /* SimplySocial-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplySocial-Prefix.pch"; sourceTree = "<group>"; };
+		869DB41716DD3DA600B90E5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		869DB41816DD3DA600B90E5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		869DB41A16DD3DA600B90E5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		869DB41C16DD3DA600B90E5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		869DB41E16DD3DA600B90E5F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		869DB42016DD3DA600B90E5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		869DB42116DD3DA600B90E5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		869DB42416DD3DA600B90E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone5.xib; sourceTree = "<group>"; };
+		869DB42716DD3DA600B90E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		869DB42F16DD3DA600B90E5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		86C66DAE16E3E7E70018990E /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = Categories/Base64.h; sourceTree = "<group>"; };
+		86C66DAF16E3E7E70018990E /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = Categories/Base64.m; sourceTree = "<group>"; };
+		86CAC57C16FC0EFA00903651 /* SimpleTwitterLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTwitterLoginViewController.h; path = SimpleTwitter/SimpleTwitterLoginViewController.h; sourceTree = "<group>"; };
+		86CAC57D16FC0EFA00903651 /* SimpleTwitterLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTwitterLoginViewController.m; path = SimpleTwitter/SimpleTwitterLoginViewController.m; sourceTree = "<group>"; };
+		86E65AA316DD664700A7125B /* SimplySocialTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplySocialTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E65AA916DD664800A7125B /* SimplySocialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplySocialTests-Info.plist"; sourceTree = "<group>"; };
+		86E65AAB16DD664800A7125B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86E65AAD16DD664800A7125B /* SimplySocialTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplySocialTests.h; sourceTree = "<group>"; };
+		86E65AAE16DD664800A7125B /* SimplySocialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplySocialTests.m; sourceTree = "<group>"; };
+		86E65AB016DD664800A7125B /* SimplySocialTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimplySocialTests-Prefix.pch"; sourceTree = "<group>"; };
+		86EF3B7216F182CF005DC72C /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "Categories/NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		86EF3B7316F182CF005DC72C /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "Categories/NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		86F73E5A170517F600C71434 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		86F73E5C1705183A00C71434 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		86F73E60170602AB00C71434 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		86F73E6217063C6600C71434 /* SimpleTwitter+CompletionHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SimpleTwitter+CompletionHandlers.h"; path = "SimpleTwitter/SimpleTwitter+CompletionHandlers.h"; sourceTree = "<group>"; };
+		86F73E6317063C6700C71434 /* SimpleTwitter+CompletionHandlers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SimpleTwitter+CompletionHandlers.m"; path = "SimpleTwitter/SimpleTwitter+CompletionHandlers.m"; sourceTree = "<group>"; };
+		86F73E6517066F1600C71434 /* SimplySocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplySocial.h; sourceTree = "<group>"; };
+		86F73E6617066F1600C71434 /* SimplySocial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplySocial.m; sourceTree = "<group>"; };
+		86F73E6C1707ABEE00C71434 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone4.xib; sourceTree = "<group>"; };
+		86F73E6E1707F67B00C71434 /* SimpleFacebookLoginViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleFacebookLoginViewController_iPhone4.xib; sourceTree = "<group>"; };
+		86F73E701707FEF000C71434 /* SimpleTwitterLoginViewController_iPhone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleTwitterLoginViewController_iPhone4.xib; path = SimpleTwitter/SimpleTwitterLoginViewController_iPhone4.xib; sourceTree = "<group>"; };
+		86F73E731708D43E00C71434 /* chime.caff */ = {isa = PBXFileReference; lastKnownFileType = file; name = chime.caff; path = Sounds/chime.caff; sourceTree = "<group>"; };
+		86F73E751708D4EE00C71434 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		869DB40216DD3DA600B90E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869DB40916DD3DA600B90E5F /* UIKit.framework in Frameworks */,
+				869DB40B16DD3DA600B90E5F /* Foundation.framework in Frameworks */,
+				869DB40D16DD3DA600B90E5F /* CoreGraphics.framework in Frameworks */,
+				86F73E5B170517F600C71434 /* Social.framework in Frameworks */,
+				86F73E5D1705183A00C71434 /* Accounts.framework in Frameworks */,
+				86F73E61170602AB00C71434 /* Twitter.framework in Frameworks */,
+				86F73E761708D4EF00C71434 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86E65A9F16DD664700A7125B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E65AA416DD664700A7125B /* SenTestingKit.framework in Frameworks */,
+				86E65AA516DD664800A7125B /* UIKit.framework in Frameworks */,
+				86E65AA616DD664800A7125B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8642959B1700F13200EDA803 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8642959C1700F14500EDA803 /* MBProgressHUD.h */,
+				8642959D1700F14500EDA803 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		8642959F1700F16B00EDA803 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				864295A21700F1CD00EDA803 /* Saturn1.jpg */,
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
+		864623EF16E02B8F009F8E7F /* Simple Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				864623F216E02B8F009F8E7F /* SimpleFacebook.h */,
+				864623F316E02B8F009F8E7F /* SimpleFacebook.m */,
+				864623F016E02B8F009F8E7F /* SimpleFacebook+AccessToken.h */,
+				864623F116E02B8F009F8E7F /* SimpleFacebook+AccessToken.m */,
+				864623F416E02B8F009F8E7F /* SimpleFacebookRequest.h */,
+				864623F516E02B8F009F8E7F /* SimpleFacebookRequest.m */,
+				864623F616E02B8F009F8E7F /* SimpleFacebookLoginViewController.h */,
+				864623F716E02B8F009F8E7F /* SimpleFacebookLoginViewController.m */,
+				864623F816E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPad.xib */,
+				864623F916E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPhone5.xib */,
+				86F73E6E1707F67B00C71434 /* SimpleFacebookLoginViewController_iPhone4.xib */,
+			);
+			name = "Simple Facebook";
+			path = SimpleFacebook;
+			sourceTree = "<group>";
+		};
+		864623FA16E02B8F009F8E7F /* Simple Support */ = {
+			isa = PBXGroup;
+			children = (
+				864295B217038EF400EDA803 /* SimplySocial.bundle */,
+				864623FB16E02B8F009F8E7F /* SimpleHeaders.h */,
+				86F73E6517066F1600C71434 /* SimplySocial.h */,
+				86F73E6617066F1600C71434 /* SimplySocial.m */,
+				864623FD16E02B8F009F8E7F /* SimpleOperation.h */,
+				864623FE16E02B8F009F8E7F /* SimpleOperation.m */,
+				864623FF16E02B8F009F8E7F /* SimpleQueue.h */,
+				8646240016E02B8F009F8E7F /* SimpleQueue.m */,
+			);
+			name = "Simple Support";
+			path = SimpleSupport;
+			sourceTree = "<group>";
+		};
+		865F254316E2FF9800D3B599 /* Simple Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				8642CCD716FBCD18008F068E /* SimpleTwitter.h */,
+				8642CCD816FBCD18008F068E /* SimpleTwitter.m */,
+				86F73E6217063C6600C71434 /* SimpleTwitter+CompletionHandlers.h */,
+				86F73E6317063C6700C71434 /* SimpleTwitter+CompletionHandlers.m */,
+				864295A61700F74700EDA803 /* SimpleTwitterRequest.h */,
+				864295A71700F74700EDA803 /* SimpleTwitterRequest.m */,
+				86CAC57C16FC0EFA00903651 /* SimpleTwitterLoginViewController.h */,
+				86CAC57D16FC0EFA00903651 /* SimpleTwitterLoginViewController.m */,
+				864295B0170386D800EDA803 /* SimpleTwitterLoginViewController_iPad.xib */,
+				864295A51700F74700EDA803 /* SimpleTwitterLoginViewController_iPhone5.xib */,
+				86F73E701707FEF000C71434 /* SimpleTwitterLoginViewController_iPhone4.xib */,
+				86CAC57F16FC0F0800903651 /* OAuth */,
+			);
+			name = "Simple Twitter";
+			sourceTree = "<group>";
+		};
+		869DB3FC16DD3DA600B90E5F = {
+			isa = PBXGroup;
+			children = (
+				869DB40E16DD3DA600B90E5F /* Simply Social */,
+				86E65AA716DD664800A7125B /* Simply Social Tests */,
+				869DB40716DD3DA600B90E5F /* Frameworks */,
+				869DB40616DD3DA600B90E5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		869DB40616DD3DA600B90E5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				869DB40516DD3DA600B90E5F /* SimplySocial.app */,
+				86E65AA316DD664700A7125B /* SimplySocialTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		869DB40716DD3DA600B90E5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				869DB40816DD3DA600B90E5F /* UIKit.framework */,
+				869DB40A16DD3DA600B90E5F /* Foundation.framework */,
+				869DB40C16DD3DA600B90E5F /* CoreGraphics.framework */,
+				86F73E5A170517F600C71434 /* Social.framework */,
+				86F73E5C1705183A00C71434 /* Accounts.framework */,
+				86F73E60170602AB00C71434 /* Twitter.framework */,
+				86F73E751708D4EE00C71434 /* AudioToolbox.framework */,
+				869DB42F16DD3DA600B90E5F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		869DB40E16DD3DA600B90E5F /* Simply Social */ = {
+			isa = PBXGroup;
+			children = (
+				86C66DAD16E3E7A60018990E /* Categories */,
+				8642959B1700F13200EDA803 /* MBProgressHUD */,
+				864623EF16E02B8F009F8E7F /* Simple Facebook */,
+				865F254316E2FF9800D3B599 /* Simple Twitter */,
+				864623FA16E02B8F009F8E7F /* Simple Support */,
+				86F73E721708D42900C71434 /* Sounds */,
+				8642959F1700F16B00EDA803 /* Samples */,
+				869DB41716DD3DA600B90E5F /* AppDelegate.h */,
+				869DB41816DD3DA600B90E5F /* AppDelegate.m */,
+				869DB42016DD3DA600B90E5F /* ViewController.h */,
+				869DB42116DD3DA600B90E5F /* ViewController.m */,
+				869DB42616DD3DA600B90E5F /* ViewController_iPad.xib */,
+				869DB42316DD3DA600B90E5F /* ViewController_iPhone5.xib */,
+				86F73E6B1707ABEE00C71434 /* ViewController_iPhone4.xib */,
+				869DB40F16DD3DA600B90E5F /* Supporting Files */,
+			);
+			name = "Simply Social";
+			path = SimplySocial;
+			sourceTree = "<group>";
+		};
+		869DB40F16DD3DA600B90E5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				869D4B7616E127D900952C75 /* Icon.png */,
+				869D4B7716E127D900952C75 /* Icon@2x.png */,
+				869D4B7816E127D900952C75 /* Icon-72.png */,
+				869D4B7C16E12A6500952C75 /* Icon-72@2x.png */,
+				869DB41016DD3DA600B90E5F /* SimplySocial-Info.plist */,
+				869DB41116DD3DA600B90E5F /* InfoPlist.strings */,
+				869DB41416DD3DA600B90E5F /* main.m */,
+				869DB41616DD3DA600B90E5F /* SimplySocial-Prefix.pch */,
+				869DB41A16DD3DA600B90E5F /* Default.png */,
+				869DB41C16DD3DA600B90E5F /* Default@2x.png */,
+				869DB41E16DD3DA600B90E5F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86C66DAD16E3E7A60018990E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				86C66DAE16E3E7E70018990E /* Base64.h */,
+				86C66DAF16E3E7E70018990E /* Base64.m */,
+				86EF3B7216F182CF005DC72C /* NSString+URLEncoding.h */,
+				86EF3B7316F182CF005DC72C /* NSString+URLEncoding.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		86CAC57F16FC0F0800903651 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				864295AA1700F76100EDA803 /* OAuth.h */,
+				864295AB1700F76100EDA803 /* OAuth.m */,
+				864295AC1700F76100EDA803 /* OAuthTwitterCallbacks.h */,
+			);
+			name = OAuth;
+			sourceTree = "<group>";
+		};
+		86E65AA716DD664800A7125B /* Simply Social Tests */ = {
+			isa = PBXGroup;
+			children = (
+				86E65AAD16DD664800A7125B /* SimplySocialTests.h */,
+				86E65AAE16DD664800A7125B /* SimplySocialTests.m */,
+				86E65AA816DD664800A7125B /* Supporting Files */,
+			);
+			name = "Simply Social Tests";
+			path = SimplySocialTests;
+			sourceTree = "<group>";
+		};
+		86E65AA816DD664800A7125B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86E65AA916DD664800A7125B /* SimplySocialTests-Info.plist */,
+				86E65AAA16DD664800A7125B /* InfoPlist.strings */,
+				86E65AB016DD664800A7125B /* SimplySocialTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86F73E721708D42900C71434 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				86F73E731708D43E00C71434 /* chime.caff */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		869DB40416DD3DA600B90E5F /* SimplySocial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 869DB44016DD3DA600B90E5F /* Build configuration list for PBXNativeTarget "SimplySocial" */;
+			buildPhases = (
+				869DB40116DD3DA600B90E5F /* Sources */,
+				869DB40216DD3DA600B90E5F /* Frameworks */,
+				869DB40316DD3DA600B90E5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplySocial;
+			productName = SimplySocial;
+			productReference = 869DB40516DD3DA600B90E5F /* SimplySocial.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86E65AA216DD664700A7125B /* SimplySocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86E65AB316DD664800A7125B /* Build configuration list for PBXNativeTarget "SimplySocialTests" */;
+			buildPhases = (
+				86E65A9E16DD664700A7125B /* Sources */,
+				86E65A9F16DD664700A7125B /* Frameworks */,
+				86E65AA016DD664700A7125B /* Resources */,
+				86E65AA116DD664700A7125B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86E65ABA16DD6BD100A7125B /* PBXTargetDependency */,
+			);
+			name = SimplySocialTests;
+			productName = SimplySocialTests;
+			productReference = 86E65AA316DD664700A7125B /* SimplySocialTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		869DB3FD16DD3DA600B90E5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Paul Sholtz";
+			};
+			buildConfigurationList = 869DB40016DD3DA600B90E5F /* Build configuration list for PBXProject "SimplySocial" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 869DB3FC16DD3DA600B90E5F;
+			productRefGroup = 869DB40616DD3DA600B90E5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				869DB40416DD3DA600B90E5F /* SimplySocial */,
+				86E65AA216DD664700A7125B /* SimplySocialTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		869DB40316DD3DA600B90E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869DB41316DD3DA600B90E5F /* InfoPlist.strings in Resources */,
+				869DB41B16DD3DA600B90E5F /* Default.png in Resources */,
+				869DB41D16DD3DA600B90E5F /* Default@2x.png in Resources */,
+				869DB41F16DD3DA600B90E5F /* Default-568h@2x.png in Resources */,
+				869DB42516DD3DA600B90E5F /* ViewController_iPhone5.xib in Resources */,
+				869DB42816DD3DA600B90E5F /* ViewController_iPad.xib in Resources */,
+				8646240516E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPad.xib in Resources */,
+				8646240616E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPhone5.xib in Resources */,
+				869D4B7916E127D900952C75 /* Icon.png in Resources */,
+				869D4B7A16E127D900952C75 /* Icon@2x.png in Resources */,
+				869D4B7B16E127D900952C75 /* Icon-72.png in Resources */,
+				869D4B7D16E12A6500952C75 /* Icon-72@2x.png in Resources */,
+				864295A31700F1CD00EDA803 /* Saturn1.jpg in Resources */,
+				864295A81700F74700EDA803 /* SimpleTwitterLoginViewController_iPhone5.xib in Resources */,
+				864295B1170386D900EDA803 /* SimpleTwitterLoginViewController_iPad.xib in Resources */,
+				864295B317038EF400EDA803 /* SimplySocial.bundle in Resources */,
+				86F73E6D1707ABEE00C71434 /* ViewController_iPhone4.xib in Resources */,
+				86F73E6F1707F67C00C71434 /* SimpleFacebookLoginViewController_iPhone4.xib in Resources */,
+				86F73E711707FEF000C71434 /* SimpleTwitterLoginViewController_iPhone4.xib in Resources */,
+				86F73E741708D43E00C71434 /* chime.caff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86E65AA016DD664700A7125B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86E65AAC16DD664800A7125B /* InfoPlist.strings in Resources */,
+				864295A41700F1CD00EDA803 /* Saturn1.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86E65AA116DD664700A7125B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		869DB40116DD3DA600B90E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869DB41516DD3DA600B90E5F /* main.m in Sources */,
+				869DB41916DD3DA600B90E5F /* AppDelegate.m in Sources */,
+				869DB42216DD3DA600B90E5F /* ViewController.m in Sources */,
+				8646240116E02B8F009F8E7F /* SimpleFacebook+AccessToken.m in Sources */,
+				8646240216E02B8F009F8E7F /* SimpleFacebook.m in Sources */,
+				8646240316E02B8F009F8E7F /* SimpleFacebookRequest.m in Sources */,
+				8646240416E02B8F009F8E7F /* SimpleFacebookLoginViewController.m in Sources */,
+				8646240816E02B8F009F8E7F /* SimpleOperation.m in Sources */,
+				8646240916E02B8F009F8E7F /* SimpleQueue.m in Sources */,
+				86C66DB016E3E7E70018990E /* Base64.m in Sources */,
+				86EF3B7416F182CF005DC72C /* NSString+URLEncoding.m in Sources */,
+				8642CCD916FBCD18008F068E /* SimpleTwitter.m in Sources */,
+				86CAC57E16FC0EFA00903651 /* SimpleTwitterLoginViewController.m in Sources */,
+				8642959E1700F14500EDA803 /* MBProgressHUD.m in Sources */,
+				864295A91700F74700EDA803 /* SimpleTwitterRequest.m in Sources */,
+				864295AD1700F76100EDA803 /* OAuth.m in Sources */,
+				86F73E6417063C6800C71434 /* SimpleTwitter+CompletionHandlers.m in Sources */,
+				86F73E6717066F1600C71434 /* SimplySocial.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86E65A9E16DD664700A7125B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8642CCD616FBC38E008F068E /* NSString+URLEncoding.m in Sources */,
+				86C66DB116E406730018990E /* Base64.m in Sources */,
+				8646240B16E02C0A009F8E7F /* SimpleQueue.m in Sources */,
+				8646240A16E02C06009F8E7F /* SimpleOperation.m in Sources */,
+				86E65AAF16DD664800A7125B /* SimplySocialTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86E65ABA16DD6BD100A7125B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869DB40416DD3DA600B90E5F /* SimplySocial */;
+			targetProxy = 86E65AB916DD6BD100A7125B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		869DB41116DD3DA600B90E5F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869DB41216DD3DA600B90E5F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		869DB42316DD3DA600B90E5F /* ViewController_iPhone5.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869DB42416DD3DA600B90E5F /* en */,
+			);
+			name = ViewController_iPhone5.xib;
+			sourceTree = "<group>";
+		};
+		869DB42616DD3DA600B90E5F /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				869DB42716DD3DA600B90E5F /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		86E65AAA16DD664800A7125B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86E65AAB16DD664800A7125B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		86F73E6B1707ABEE00C71434 /* ViewController_iPhone4.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86F73E6C1707ABEE00C71434 /* en */,
+			);
+			name = ViewController_iPhone4.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		869DB43E16DD3DA600B90E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		869DB43F16DD3DA600B90E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		869DB44116DD3DA600B90E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplySocial/SimplySocial-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SimplySocial/SimplySocial-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		869DB44216DD3DA600B90E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplySocial/SimplySocial-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "SimplySocial/SimplySocial-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		86E65AB116DD664800A7125B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplySocialTests/SimplySocialTests-Prefix.pch";
+				INFOPLIST_FILE = "SimplySocialTests/SimplySocialTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		86E65AB216DD664800A7125B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimplySocialTests/SimplySocialTests-Prefix.pch";
+				INFOPLIST_FILE = "SimplySocialTests/SimplySocialTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		869DB40016DD3DA600B90E5F /* Build configuration list for PBXProject "SimplySocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869DB43E16DD3DA600B90E5F /* Debug */,
+				869DB43F16DD3DA600B90E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		869DB44016DD3DA600B90E5F /* Build configuration list for PBXNativeTarget "SimplySocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				869DB44116DD3DA600B90E5F /* Debug */,
+				869DB44216DD3DA600B90E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86E65AB316DD664800A7125B /* Build configuration list for PBXNativeTarget "SimplySocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86E65AB116DD664800A7125B /* Debug */,
+				86E65AB216DD664800A7125B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 869DB3FD16DD3DA600B90E5F /* Project object */;
+}
