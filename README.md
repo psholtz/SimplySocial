@@ -92,6 +92,21 @@ I'll gloss over that here, assuming that most people reading this know what they
 
 The one thing about the delegates worth pointing out here is that they both have a required attribute called "targetViewController" -- it's important that you furnish the delegate with a target UIViewController in which to render the OAuth login screens sent by Facebook and Twitter. Otherwise, we have no way to display these login screens to the user, and consequently there is no way for your users to authenticate themselves to Facebook and Twitter.
 
+Running the Sample Code
+-----------------------
+
+The quickest way to get the sample code in this project to compile and run is to configure the compiler flags listed above with those corresponding to your own social apps:
+
+<pre>
+#define _kSIMPLE_FACEBOOK_API_KEY                   @"YOUR-FACEBOOK-API-KEY"
+
+#define _kSIMPLE_TWITTER_CONSUMER_KEY               @"YOUR-TWITTER-CONSUMER-KEY"
+#define _kSIMPLE_TWITTER_CONSUMER_SECRET            @"YOUR-TWITTER-CONSUMER-SECRET"
+#define _kSIMPLE_TWITTER_CALLBACK_URL               @"YOUR-TWITTER-CALLBACK-URL"
+</pre>
+
+This was mentioned above, but just in case people are skimming and not reading, there it is again.
+
 Self-Indulgent SoundFX
 ------------------------
 
@@ -110,5 +125,13 @@ To enable the gratuitous sound effect, make sure the following compiler flag is 
 and be sure that the boolean "useSound" attribute on your SimplySocial object is set to true.
 
 To turn the gratuitous sound effect feature off, just set the compiler flag above to 0.
+
+Version History
+--------------- 
+
+**Version 1.0** @ April 2, 2013
+<ul>
+<li>Initial release.</li>
+</ul>
 
 *Produced in cooperation with [Dae Myung](https://github.com/myung).*
