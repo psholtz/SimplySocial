@@ -36,8 +36,8 @@
 
 #define kSimpleTwitterHost                          @"api.twitter.com"
 #define kSimpleTwitterAuthorizeURL                  @"http://api.twitter.com/oauth/authorize"
-#define kSimpleTwitterTextPostURL                   @"https://api.twitter.com/1/statuses/update.json"
-#define kSimpleTwitterTextAndImagePostURL           @"https://upload.twitter.com/1/statuses/update_with_media.json"
+#define kSimpleTwitterTextPostURL                   @"https://api.twitter.com/1.1/statuses/update.json"
+#define kSimpleTwitterTextAndImagePostURL           @"https://api.twitter.com/1.1/statuses/update_with_media.json"
 #define kSimpleTwitterOAuthTokenKey                 @"oauth_token"
 #define kSimpleTwitterOAuthVerifierKey              @"oauth_verifier="
 #define kSimpleTwitterTimeout                       30
