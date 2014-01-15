@@ -35,7 +35,7 @@
 #define _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE    0
 
 #define kSimpleTwitterHost                          @"api.twitter.com"
-#define kSimpleTwitterAuthorizeURL                  @"http://api.twitter.com/oauth/authorize"
+#define kSimpleTwitterAuthorizeURL                  @"https://api.twitter.com/oauth/authorize"
 #define kSimpleTwitterTextPostURL                   @"https://api.twitter.com/1.1/statuses/update.json"
 #define kSimpleTwitterTextAndImagePostURL           @"https://api.twitter.com/1.1/statuses/update_with_media.json"
 #define kSimpleTwitterOAuthTokenKey                 @"oauth_token"

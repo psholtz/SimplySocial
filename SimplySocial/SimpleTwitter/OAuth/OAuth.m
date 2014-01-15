@@ -247,7 +247,7 @@
  */
 - (BOOL) synchronousVerifyTwitterCredentials {
 	
-	NSString *url = @"https://api.twitter.com/1/account/verify_credentials.json";
+	NSString *url = @"https://api.twitter.com/1.1/account/verify_credentials.json";
 	
 	NSString *oauth_header = [self oAuthHeaderForMethod:@"GET" andUrl:url andParams:nil];
 	
