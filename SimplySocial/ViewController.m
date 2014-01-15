@@ -24,6 +24,8 @@
 //  Created by Paul Sholtz on 2/26/13.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "ViewController.h"
 
 #import "SimpleFacebook.h"
@@ -31,7 +33,12 @@
 
 #import "SimpleTwitter.h"
 
+#define kKBLabelColor1 [UIColor colorWithWhite:0.5f alpha:1.0f];
+#define kKBLabelColor2 [UIColor colorWithWhite:0.5f alpha:0.6f];
+
 static CGFloat kDurationFade = 0.2f;
+static CGFloat kBorderWidth  = 1.0f;
+static CGFloat kCornerRadius = 5.0f;
 
 static NSString *kSampleURL = @"http://www.sholtz9421.com";
 
@@ -134,6 +141,43 @@ enum {
     // Begin listen for rotations (use Observer, since we can have more than one 1 VC onscreen at a time)
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    
+    // Slight hack for iOS7
+    if ( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ) {
+        // Facebook Buttons
+        [self adjustButtonColor:self.buttonFacebookText];
+        [self adjustButtonColor:self.buttonFacebookURL];
+        [self adjustButtonColor:self.buttonFacebookImage];
+        [self adjustButtonColor:self.buttonFacebookImageURL];
+        [self adjustButtonColor:self.buttonFacebookCancel];
+        
+        // Twitter Buttons
+        [self adjustButtonColor:self.buttonTwitterText];
+        [self adjustButtonColor:self.buttonTwitterURL];
+        [self adjustButtonColor:self.buttonTwitterImage];
+        [self adjustButtonColor:self.buttonTwitterImageURL];
+        [self adjustButtonColor:self.buttonTwitterCancel];
+        
+        // Slider
+        [self adjustSwitchColor:self.switchFacebook];
+        [self adjustSwitchColor:self.switchTwitter];
+    
+        // The one button is incorrectly positioned
+        self.buttonFacebookImageURL.frame = CGRectMake(self.buttonFacebookURL.frame.origin.x,
+                                                       self.buttonFacebookImage.frame.origin.y,
+                                                       self.buttonFacebookImage.frame.size.width,
+                                                       self.buttonFacebookImage.frame.size.height);
+        
+        self.buttonTwitterImageURL.frame = CGRectMake(self.buttonTwitterURL.frame.origin.x,
+                                                       self.buttonTwitterImage.frame.origin.y,
+                                                       self.buttonTwitterImage.frame.size.width,
+                                                       self.buttonTwitterImage.frame.size.height);
+        
+        // Adjust the cancel buttons down a bit
+        CGFloat margin1 = 10.0f;
+        [self adjustViewPosition:self.buttonFacebookCancel withMargin:margin1];
+        [self adjustViewPosition:self.buttonTwitterCancel withMargin:margin1];
+    }
 }
 
 - (void)viewDidUnload {
@@ -144,6 +188,26 @@ enum {
     self.buttonTwitterCancel = nil;
     self.pageControl = nil;
     [super viewDidUnload];
+}
+
+// Hacks for iOS7 position
+- (void)adjustViewPosition:(UIView*)view1 withMargin:(CGFloat)margin {
+    CGRect tmp = view1.frame;
+    view1.frame = CGRectMake(tmp.origin.x, tmp.origin.y + margin, tmp.size.width, tmp.size.height);
+}
+
+// Hacks for iOS7 colors
+- (void)adjustButtonColor:(UIButton*)button {
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.backgroundColor = kKBLabelColor1;
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    button.layer.borderWidth = kBorderWidth;
+    button.layer.cornerRadius = kCornerRadius;
+}
+
+- (void)adjustSwitchColor:(UISwitch*)slider {
+    slider.backgroundColor = kKBLabelColor2;
+    slider.layer.cornerRadius = 16.0f;
 }
 
 // For pre-iOS6

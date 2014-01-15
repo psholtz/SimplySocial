@@ -35,8 +35,20 @@
 @property (nonatomic, SIMPLE_WEAK) IBOutlet UIView *twitterPanel;
 @property (nonatomic, SIMPLE_WEAK) IBOutlet UIPageControl *pageControl;
 
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookText;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookURL;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookImage;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookImageURL;
 @property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookCancel;
+
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterText;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterURL;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterImage;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterImageURL;
 @property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterCancel;
+
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UISwitch * switchFacebook;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UISwitch * switchTwitter;
 
 #pragma mark -
 #pragma mark IBAction Methods
