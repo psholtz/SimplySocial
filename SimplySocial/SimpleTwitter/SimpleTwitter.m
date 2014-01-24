@@ -452,11 +452,10 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
             // Good
             if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(simpleTwitterDidPost:)] ) {
                 [self.delegate simpleTwitterDidPost:self];
-                
-#if _kSIMPLY_SOCIAL_USE_SOUND
-                [self playSound];
-#endif
             }
+#if _kSIMPLY_SOCIAL_USE_SOUND
+            [self playSound];
+#endif
             break;
         default:
             // Error

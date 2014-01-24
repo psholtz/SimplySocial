@@ -397,11 +397,10 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
         case 200:
             if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(simpleFacebookDidPost:)] ) {
                 [self.delegate simpleFacebookDidPost:self];
-                
-#if _kSIMPLY_SOCIAL_USE_SOUND
-                [self playSound];
-#endif
             }
+#if _kSIMPLY_SOCIAL_USE_SOUND
+            [self playSound];
+#endif
             break;
             
         // NEED AUTHORIZATION
