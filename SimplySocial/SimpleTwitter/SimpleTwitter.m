@@ -350,7 +350,7 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 #pragma mark Twitter Web/Login Delegate
 - (void)loginViewControllerDidSucceed:(id)sender {    
     // Signal to delegate
-    if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(simpleTwitterDidLogin)] )  {
+    if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(simpleTwitterDidLogin:)] )  {
         [self.delegate simpleTwitterDidLogin:self];
     }
     
