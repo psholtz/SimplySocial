@@ -129,7 +129,7 @@
 		86C66DAF16E3E7E70018990E /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = Categories/Base64.m; sourceTree = "<group>"; };
 		86CAC57C16FC0EFA00903651 /* SimpleTwitterLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTwitterLoginViewController.h; path = SimpleTwitter/SimpleTwitterLoginViewController.h; sourceTree = "<group>"; };
 		86CAC57D16FC0EFA00903651 /* SimpleTwitterLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTwitterLoginViewController.m; path = SimpleTwitter/SimpleTwitterLoginViewController.m; sourceTree = "<group>"; };
-		86E65AA316DD664700A7125B /* SimplySocialTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplySocialTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E65AA316DD664700A7125B /* SimplySocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplySocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E65AA916DD664800A7125B /* SimplySocialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimplySocialTests-Info.plist"; sourceTree = "<group>"; };
 		86E65AAB16DD664800A7125B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86E65AAD16DD664800A7125B /* SimplySocialTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplySocialTests.h; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				869DB40516DD3DA600B90E5F /* SimplySocial.app */,
-				86E65AA316DD664700A7125B /* SimplySocialTests.octest */,
+				86E65AA316DD664700A7125B /* SimplySocialTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -411,7 +411,7 @@
 			);
 			name = SimplySocialTests;
 			productName = SimplySocialTests;
-			productReference = 86E65AA316DD664700A7125B /* SimplySocialTests.octest */;
+			productReference = 86E65AA316DD664700A7125B /* SimplySocialTests.xctest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -684,7 +684,7 @@
 				GCC_PREFIX_HEADER = "SimplySocialTests/SimplySocialTests-Prefix.pch";
 				INFOPLIST_FILE = "SimplySocialTests/SimplySocialTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -699,7 +699,7 @@
 				GCC_PREFIX_HEADER = "SimplySocialTests/SimplySocialTests-Prefix.pch";
 				INFOPLIST_FILE = "SimplySocialTests/SimplySocialTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
