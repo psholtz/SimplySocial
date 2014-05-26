@@ -108,7 +108,7 @@
         header = [oAuth oAuthHeaderForMethod:@"POST" andUrl:[targetURL absoluteString] andParams:params];
         [postRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         data = [[string dataUsingEncoding:NSUTF8StringEncoding] mutableCopy];
-        [postRequest setValue:[NSString stringWithFormat:@"%d", [data length]] forHTTPHeaderField:@"Content-Length"];
+        [postRequest setValue:[NSString stringWithFormat:@"%lu", [data length]] forHTTPHeaderField:@"Content-Length"];
     }
     
     [postRequest setHTTPBody:data];
@@ -187,7 +187,7 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
-    self.responseStatusCode = [response statusCode];
+    self.responseStatusCode = (int)[response statusCode];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {

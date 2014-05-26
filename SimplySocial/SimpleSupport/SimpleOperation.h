@@ -27,8 +27,8 @@
 @interface SimpleOperation : NSObject
 
 @property (nonatomic,assign) int kind;
-@property (nonatomic,strong) NSString *text;
-@property (nonatomic,strong) NSString *url;
+@property (nonatomic,copy)   NSString *text;
+@property (nonatomic,copy)   NSString *url;
 @property (nonatomic,strong) NSMutableArray *images;
 
 - (void)addImage:(UIImage*)image;

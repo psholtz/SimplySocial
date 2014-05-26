@@ -79,7 +79,7 @@
     
     [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [request setHTTPBody:body];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [body length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", [body length]];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     request.URL = [NSURL URLWithString:(images) ? kSimpleFacebookPostImage : kSimpleFacebookPostText];
     

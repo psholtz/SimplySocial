@@ -104,7 +104,7 @@
 
 // Size
 - (int)size {
-    return [_queue count];
+    return (int)[_queue count];
 }
 
 #pragma mark -

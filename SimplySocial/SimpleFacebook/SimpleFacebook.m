@@ -47,7 +47,7 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
 #pragma mark Internal Interface
 @interface SimpleFacebook () <SimpleFacebookLoginViewControllerDelegate>
 
-@property (nonatomic, strong) NSString          *apiKey;
+@property (nonatomic, copy)   NSString          *apiKey;
 @property (nonatomic, strong) SimpleQueue       *queue;
 @property (nonatomic, strong) SimpleFacebookLoginViewController *login;
 

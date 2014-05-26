@@ -37,7 +37,7 @@
 		oauth_version = @"1.0";
 		self.oauth_token = @"";
 		self.oauth_token_secret = @"";
-		srandom(time(NULL)); // seed the random number generator, used for generating nonces
+		srandom((unsigned int)time(NULL)); // seed the random number generator, used for generating nonces
 		self.oauth_token_authorized = NO;
 		self.delegate = nil;
 		self.user_id = @"";
@@ -270,9 +270,9 @@
 	// Freshen the context. Get a fresh timestamp and calculate a nonce.
 	// Nonce algorithm is sha1(timestamp || random), i.e
 	// we concatenate timestamp with a random string, and then sha1 it.
-	int timestamp = time(NULL);
+	int timestamp = (int)time(NULL);
 	oauth_timestamp = [NSString stringWithFormat:@"%d", timestamp];
-	int myRandom = random();
+	int myRandom = (int)random();
 	oauth_nonce = [self sha1:[NSString stringWithFormat:@"%d%d", timestamp, myRandom]];
 	
 	NSMutableDictionary *parts = [NSMutableDictionary dictionaryWithCapacity:[[self oauth_base_components] count]];
@@ -348,7 +348,7 @@
 - (NSString *)sha1:(NSString *)str
 {
 	unsigned char result[CC_SHA1_DIGEST_LENGTH];
-	CC_SHA1(str.UTF8String, str.length, result);
+	CC_SHA1(str.UTF8String, (unsigned int)str.length, result);
 	NSMutableString *out = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
 	for (int i = 0; i < CC_SHA1_DIGEST_LENGTH; i++) {[out appendFormat:@"%02x", result[i]];}
 	return out;

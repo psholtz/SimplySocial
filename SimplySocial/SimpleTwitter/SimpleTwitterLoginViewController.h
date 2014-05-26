@@ -49,7 +49,7 @@
 
 @property (nonatomic, assign) BOOL usePreloading;
 @property (nonatomic, assign) BOOL preloading;
-@property (nonatomic, strong) NSString *callbackURL;
+@property (nonatomic, copy)   NSString *callbackURL;
 
 #pragma mark -
 #pragma mark IBAction Methods

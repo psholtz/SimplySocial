@@ -28,6 +28,6 @@
 
 @interface SimpleFacebook (AccessToken)
 
-@property (nonatomic, strong) NSString *accessToken;
+@property (nonatomic, copy) NSString *accessToken;
 
 @end

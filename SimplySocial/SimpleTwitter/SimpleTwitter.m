@@ -53,7 +53,7 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 
 @property (nonatomic, strong) SimpleQueue *queue;
 @property (nonatomic, strong) OAuth *oAuth;
-@property (nonatomic, strong) NSString *callbackURL;
+@property (nonatomic, copy)   NSString *callbackURL;
 @property (nonatomic, strong) SimpleTwitterLoginViewController *login;
 
 // Supporting methods

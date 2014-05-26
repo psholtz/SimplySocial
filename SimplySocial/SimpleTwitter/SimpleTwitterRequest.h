@@ -31,11 +31,11 @@
 @interface SimpleTwitterRequest : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic, strong) NSURL           *url;
-@property (nonatomic, strong) NSString        *requestMethod;
+@property (nonatomic, copy)   NSString        *requestMethod;
 @property (nonatomic, strong) NSError         *error;
 @property (nonatomic, assign) int              responseStatusCode;
-@property (nonatomic, strong) NSString        *responseStatusMessage;
-@property (nonatomic, strong) NSString        *responseString;
+@property (nonatomic, copy)   NSString        *responseStatusMessage;
+@property (nonatomic, copy)   NSString        *responseString;
 @property (nonatomic, strong) NSMutableData   *responseData;
 @property (nonatomic, strong) NSURLConnection *urlConnection;
 
