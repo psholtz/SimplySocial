@@ -290,9 +290,7 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     if ( op != nil ) {
         NSURLRequest *request = [SimpleFacebookRequest postRequest:op token:token];
         if ( request ) {
-            // Only logging to NSLog to prevent compiler warnings
-            NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-            NSLog(@"++ SimpleFacebook posting with connection: %@", conn);
+            __unused NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
             return;
         }
     }

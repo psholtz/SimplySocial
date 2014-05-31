@@ -325,9 +325,7 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
     if ( op != nil ){
         NSURLRequest *request = [SimpleTwitterRequest postRequest:op oauth:self.oAuth];
         if ( request != nil ) {
-            // Only logging to NSLog to prevent compiler warnings
-            NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-            NSLog(@"++ SimpleTwitter posting with connection: %@", conn);
+            __unused NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
             return;
         }
     }
