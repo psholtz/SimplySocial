@@ -46,7 +46,6 @@
 		86C66DB016E3E7E70018990E /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C66DAF16E3E7E70018990E /* Base64.m */; };
 		86C66DB116E406730018990E /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C66DAF16E3E7E70018990E /* Base64.m */; };
 		86CAC57E16FC0EFA00903651 /* SimpleTwitterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86CAC57D16FC0EFA00903651 /* SimpleTwitterLoginViewController.m */; };
-		86E65AA416DD664700A7125B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB42F16DD3DA600B90E5F /* SenTestingKit.framework */; };
 		86E65AA516DD664800A7125B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40816DD3DA600B90E5F /* UIKit.framework */; };
 		86E65AA616DD664800A7125B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869DB40A16DD3DA600B90E5F /* Foundation.framework */; };
 		86E65AAC16DD664800A7125B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86E65AAA16DD664800A7125B /* InfoPlist.strings */; };
@@ -124,7 +123,6 @@
 		869DB42116DD3DA600B90E5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		869DB42416DD3DA600B90E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone5.xib; sourceTree = "<group>"; };
 		869DB42716DD3DA600B90E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
-		869DB42F16DD3DA600B90E5F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		86C66DAE16E3E7E70018990E /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = Categories/Base64.h; sourceTree = "<group>"; };
 		86C66DAF16E3E7E70018990E /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = Categories/Base64.m; sourceTree = "<group>"; };
 		86CAC57C16FC0EFA00903651 /* SimpleTwitterLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTwitterLoginViewController.h; path = SimpleTwitter/SimpleTwitterLoginViewController.h; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E65AA416DD664700A7125B /* SenTestingKit.framework in Frameworks */,
 				86E65AA516DD664800A7125B /* UIKit.framework in Frameworks */,
 				86E65AA616DD664800A7125B /* Foundation.framework in Frameworks */,
 			);
@@ -279,7 +276,6 @@
 				86F73E5C1705183A00C71434 /* Accounts.framework */,
 				86F73E60170602AB00C71434 /* Twitter.framework */,
 				86F73E751708D4EE00C71434 /* AudioToolbox.framework */,
-				869DB42F16DD3DA600B90E5F /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -412,7 +408,7 @@
 			name = SimplySocialTests;
 			productName = SimplySocialTests;
 			productReference = 86E65AA316DD664700A7125B /* SimplySocialTests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -679,6 +675,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplySocialTests/SimplySocialTests-Prefix.pch";
@@ -694,6 +691,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimplySocialTests/SimplySocialTests-Prefix.pch";

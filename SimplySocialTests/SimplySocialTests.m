@@ -77,39 +77,39 @@
 {
     // start the queue
     SimpleQueue *queue = [[SimpleQueue alloc] init];
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
 
     // we have one objs
     [queue enqueueObj:@"one"];
-    STAssertEquals(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // we have two objs
     [queue enqueueObj:@"two"];
-    STAssertEquals(2, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(2, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // only have one left!
-    STAssertEqualObjects(@"one", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
-    STAssertEqualObjects(@"one", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(@"one", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
+    XCTAssertEqualObjects(@"one", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // add on two more
     [queue enqueueObj:@"three"];
     [queue enqueueObj:@"four"];
-    STAssertEquals(3, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(3, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // dequeue all remaining objs
-    STAssertEqualObjects(@"two", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
-    STAssertEqualObjects(@"two", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEqualObjects(@"three", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
-    STAssertEqualObjects(@"three", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
-    STAssertEqualObjects(@"four", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
-    STAssertEqualObjects(@"four", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(@"two", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
+    XCTAssertEqualObjects(@"two", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqualObjects(@"three", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
+    XCTAssertEqualObjects(@"three", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(@"four", [queue peekObj], _kSIMPLE_LABEL_QUEUE_CHECK_PEEK);
+    XCTAssertEqualObjects(@"four", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // pop just one more time, to test
-    STAssertEqualObjects(nil, [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(nil, [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
 }
 
 // Test the "enqueueObjects" method
@@ -117,33 +117,33 @@
 {
     // start the queue
     SimpleQueue *queue = [[SimpleQueue alloc] init];
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // add an entire array
     NSArray *objs = [NSArray arrayWithObjects:@"one", @"two", @"three", @"four", nil];
     [queue enqueueObjects:objs];
-    STAssertEquals(4, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(4, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // dequeue some objs
-    STAssertEqualObjects(@"one", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEqualObjects(@"two", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEqualObjects(@"three", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(@"one", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqualObjects(@"two", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqualObjects(@"three", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(1, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // add some more objs
     [queue enqueueObj:@"five"];
     [queue enqueueObj:@"six"];
-    STAssertEquals(3, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(3, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // dequeue everything
-    STAssertEqualObjects(@"four", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEqualObjects(@"five", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEqualObjects(@"six", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(@"four", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqualObjects(@"five", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqualObjects(@"six", [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // pop just one more time, to test
-    STAssertEqualObjects(nil, [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqualObjects(nil, [queue dequeueObj], _kSIMPLE_LABEL_QUEUE_CHECK_DEQUEUE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
 }
 
 // Test the fast enumeration feature
@@ -151,7 +151,7 @@
 {
     // start the queue
     SimpleQueue *queue = [[SimpleQueue alloc] init];
-    STAssertEquals(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
+    XCTAssertEqual(0, queue.size, _kSIMPLE_LABEL_QUEUE_CHECK_SIZE);
     
     // add an entire array
     NSArray *objs = [NSArray arrayWithObjects:@"one", @"two", @"three", @"four", @"five", @"six", nil];
@@ -162,22 +162,22 @@
     for ( id obj in queue ) {
         switch ( count ) {
             case 0:
-                STAssertEqualObjects(@"one", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
+                XCTAssertEqualObjects(@"one", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
                 break;
             case 1:
-                STAssertEqualObjects(@"two", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
+                XCTAssertEqualObjects(@"two", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
                 break;
             case 2:
-                STAssertEqualObjects(@"three", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
+                XCTAssertEqualObjects(@"three", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
                 break;
             case 3:
-                STAssertEqualObjects(@"four", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
+                XCTAssertEqualObjects(@"four", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
                 break;
             case 4:
-                STAssertEqualObjects(@"five", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
+                XCTAssertEqualObjects(@"five", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
                 break;
             case 5:
-                STAssertEqualObjects(@"six", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
+                XCTAssertEqualObjects(@"six", obj, _kSIMPLE_LABEL_QUEUE_CHECK_FAST_ENUMERATION);
                 break;
         }
         count++;
@@ -188,31 +188,31 @@
 #pragma mark Test Operations
 // Check the "isEmpty" Macro
 - (void)testFunctions1 {
-    STAssertTrue(isEmpty(nil), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
-    STAssertTrue(isEmpty([NSNull null]), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
-    STAssertTrue(isEmpty([[NSData alloc] init]), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
-    STAssertTrue(isEmpty(@""), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
-    STAssertFalse(isEmpty(@" "), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);  // <- this is the use case that we designed isNSStringEmpty for
-    STAssertFalse(isEmpty(@"  "), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY); // <- this is the use case that we designed isNSStringEmpty for
-    STAssertFalse(isEmpty(@"test"), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
+    XCTAssertTrue(isEmpty(nil), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
+    XCTAssertTrue(isEmpty([NSNull null]), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
+    XCTAssertTrue(isEmpty([[NSData alloc] init]), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
+    XCTAssertTrue(isEmpty(@""), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
+    XCTAssertFalse(isEmpty(@" "), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);  // <- this is the use case that we designed isNSStringEmpty for
+    XCTAssertFalse(isEmpty(@"  "), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY); // <- this is the use case that we designed isNSStringEmpty for
+    XCTAssertFalse(isEmpty(@"test"), _kSIMPLE_LABEL_FUNCTION_CHECK_OBJ_EMPTY);
 }
 
 // Check the "isNSStringEmpty" Macro
 - (void)testFunctions2 {
-    STAssertTrue(isNSStringEmpty(@""), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@" "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@"  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@"\t"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@"\n"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@"\r"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@"\r\n"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertTrue(isNSStringEmpty(@" \t\r\n"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertFalse(isNSStringEmpty(@"test"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertFalse(isNSStringEmpty(@"  test  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertFalse(isNSStringEmpty(@"test this"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertFalse(isNSStringEmpty(@"  test this  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertFalse(isNSStringEmpty(@"x"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
-    STAssertFalse(isNSStringEmpty(@"  x  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@""), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@" "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@"  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@"\t"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@"\n"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@"\r"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@"\r\n"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertTrue(isNSStringEmpty(@" \t\r\n"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertFalse(isNSStringEmpty(@"test"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertFalse(isNSStringEmpty(@"  test  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertFalse(isNSStringEmpty(@"test this"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertFalse(isNSStringEmpty(@"  test this  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertFalse(isNSStringEmpty(@"x"), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
+    XCTAssertFalse(isNSStringEmpty(@"  x  "), _kSIMPLE_LABEL_FUNCTION_CHECK_NSSTRING_EMPTY);
 }
 
 // NSData 1 (Base64)
@@ -221,13 +221,13 @@
     NSString *sample1a = @"dGVzdA==";
     NSData *data1 = [NSData dataWithBase64EncodedString:sample1a];
     NSString *sample1b = [[NSString alloc] initWithData:data1 encoding:NSASCIIStringEncoding];
-    STAssertEqualObjects(@"test", sample1b, _kSIMPLE_LABEL_BASE64_DATA_1_CHECK);
+    XCTAssertEqualObjects(@"test", sample1b, _kSIMPLE_LABEL_BASE64_DATA_1_CHECK);
     
     //this is a test
     NSString *sample2a = @"dGhpcyBpcyBhIHRlc3Q=";
     NSData *data2 = [NSData dataWithBase64EncodedString:sample2a];
     NSString *sample2b = [[NSString alloc] initWithData:data2 encoding:NSASCIIStringEncoding];
-    STAssertEqualObjects(@"this is a test", sample2b, _kSIMPLE_LABEL_BASE64_DATA_1_CHECK);
+    XCTAssertEqualObjects(@"this is a test", sample2b, _kSIMPLE_LABEL_BASE64_DATA_1_CHECK);
 }
 
 // NSData 2 (Base64) 
@@ -238,7 +238,7 @@
     NSString *test1b = [data1a base64EncodedString];
     NSData *data1b = [NSData dataWithBase64EncodedString:test1b];
     NSString *test1c = [[NSString alloc] initWithData:data1b encoding:NSASCIIStringEncoding];
-    STAssertEqualObjects(test1a, test1c, _kSIMPLE_LABEL_BASE64_DATA_2_CHECK);
+    XCTAssertEqualObjects(test1a, test1c, _kSIMPLE_LABEL_BASE64_DATA_2_CHECK);
     
     // this is a test
     NSString *test2a = @"this is a test";
@@ -246,7 +246,7 @@
     NSString *test2b = [data2a base64EncodedString];
     NSData *data2b = [NSData dataWithBase64EncodedString:test2b];
     NSString *test2c = [[NSString alloc] initWithData:data2b encoding:NSASCIIStringEncoding];
-    STAssertEqualObjects(test2a, test2c, _kSIMPLE_LABEL_BASE64_DATA_2_CHECK);
+    XCTAssertEqualObjects(test2a, test2c, _kSIMPLE_LABEL_BASE64_DATA_2_CHECK);
 }
 
 // NSString 1 (Base64)
@@ -254,12 +254,12 @@
     //test
     NSString *sample1a = @"dGVzdA==";
     NSString *sample1b = [NSString stringWithBase64EncodedString:sample1a];
-    STAssertEqualObjects(@"test", sample1b, _kSIMPLE_LABEL_BASE64_STRING_1_CHECK);
+    XCTAssertEqualObjects(@"test", sample1b, _kSIMPLE_LABEL_BASE64_STRING_1_CHECK);
     
     //this is a test
     NSString *sample2a = @"dGhpcyBpcyBhIHRlc3Q=";
     NSString *sample2b = [NSString stringWithBase64EncodedString:sample2a];
-    STAssertEqualObjects(@"this is a test", sample2b, _kSIMPLE_LABEL_BASE64_STRING_1_CHECK);
+    XCTAssertEqualObjects(@"this is a test", sample2b, _kSIMPLE_LABEL_BASE64_STRING_1_CHECK);
 }
 
 // NSString 2 (Base64)
@@ -267,12 +267,12 @@
     //test
     NSString *sample1a = @"test";
     NSString *sample1b = @"dGVzdA==";
-    STAssertEqualObjects(sample1b, [sample1a base64EncodedString], _kSIMPLE_LABEL_BASE64_STRING_2_CHECK);
+    XCTAssertEqualObjects(sample1b, [sample1a base64EncodedString], _kSIMPLE_LABEL_BASE64_STRING_2_CHECK);
     
     //this is a test
     NSString *sample2a = @"this is a test";
     NSString *sample2b = @"dGhpcyBpcyBhIHRlc3Q=";
-    STAssertEqualObjects(sample2b, [sample2a base64EncodedString], _kSIMPLE_LABEL_BASE64_STRING_2_CHECK);
+    XCTAssertEqualObjects(sample2b, [sample2a base64EncodedString], _kSIMPLE_LABEL_BASE64_STRING_2_CHECK);
 }
 
 // NSString 3 (Base64)
@@ -280,12 +280,12 @@
     //test
     NSString *sample1a = @"test";
     NSString *sample1b = @"dGVzdA==";
-    STAssertEqualObjects(sample1a, [sample1b base64DecodedString], _kSIMPLE_LABEL_BASE64_STRING_3_CHECK);
+    XCTAssertEqualObjects(sample1a, [sample1b base64DecodedString], _kSIMPLE_LABEL_BASE64_STRING_3_CHECK);
     
     //this is a test
     NSString *sample2a = @"this is a test";
     NSString *sample2b = @"dGhpcyBpcyBhIHRlc3Q=";
-    STAssertEqualObjects(sample2a, [sample2b base64DecodedString], _kSIMPLE_LABEL_BASE64_STRING_3_CHECK);
+    XCTAssertEqualObjects(sample2a, [sample2b base64DecodedString], _kSIMPLE_LABEL_BASE64_STRING_3_CHECK);
 }
 
 // NSString1 (URLEncoding)
@@ -295,10 +295,10 @@
     NSString *sample1b = @"%22Aardvarks%20lurk,%20OK%3F%22";
     NSString *sample1c = @"%22Aardvarks%20lurk%2C%20OK%3F%22";
     
-    STAssertEqualObjects([sample1a encodedURLString], sample1b, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
-    STAssertEqualObjects([sample1a encodedURLParameterString], sample1c, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
-    STAssertEqualObjects([sample1b decodedURLString], sample1a, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
-    STAssertEqualObjects([sample1c decodedURLString], sample1a, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
+    XCTAssertEqualObjects([sample1a encodedURLString], sample1b, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
+    XCTAssertEqualObjects([sample1a encodedURLParameterString], sample1c, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
+    XCTAssertEqualObjects([sample1b decodedURLString], sample1a, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
+    XCTAssertEqualObjects([sample1c decodedURLString], sample1a, _kSIMPLE_LABEL_URLENCODING_STRING_CHECK);
 }
 
 @end

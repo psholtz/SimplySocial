@@ -24,8 +24,8 @@
 //  Created by Paul Sholtz on 2/26/13.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface SimplySocialTests : SenTestCase
+@interface SimplySocialTests : XCTestCase
 
 @end

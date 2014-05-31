@@ -17,7 +17,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "86E65AA216DD664700A7125B"
-               BuildableName = "SimplySocialTests.octest"
+               BuildableName = "SimplySocialTests.xctest"
                BlueprintName = "SimplySocialTests"
                ReferencedContainer = "container:SimplySocial.xcodeproj">
             </BuildableReference>
