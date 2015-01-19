@@ -71,7 +71,10 @@
     if ( [parent respondsToSelector:@selector(presentViewController:animated:completion:)] ) {
         [parent presentViewController:controller animated:YES completion:nil];
     } else if ( [parent respondsToSelector:@selector(presentModalViewController:animated:)] ) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [parent presentModalViewController:controller animated:YES];
+#pragma clang diagnostic pop
     } else {
         [NSException raise:kSimplySocialExceptionTitle format:kSimplySocialExceptionDelegateDisplay];
     }
@@ -81,7 +84,10 @@
     if ( [parent respondsToSelector:@selector(dismissViewControllerAnimated:completion:)] ) {
         [parent dismissViewControllerAnimated:YES completion:nil];
     } else if ( [parent respondsToSelector:@selector(dismissModalViewControllerAnimated:)] ) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         [parent dismissModalViewControllerAnimated:YES];
+#pragma clang diagnostic pop
     } else {
         [NSException raise:kSimplySocialExceptionTitle format:kSimplySocialExceptionDelegateDismiss];
     }

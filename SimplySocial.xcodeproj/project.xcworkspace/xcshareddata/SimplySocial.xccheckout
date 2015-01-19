@@ -10,29 +10,29 @@
 	<string>SimplySocial</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B18AE93B-F285-4C34-A296-D6D01BA7DAC7</key>
+		<key>8DF575BBCB8CF2510256B5B6D8B053F4E43A3219</key>
 		<string>https://github.com/psholtz/SimplySocial.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SimplySocial.xcodeproj/project.xcworkspace</string>
+	<string>SimplySocial.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B18AE93B-F285-4C34-A296-D6D01BA7DAC7</key>
+		<key>8DF575BBCB8CF2510256B5B6D8B053F4E43A3219</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/psholtz/SimplySocial.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B18AE93B-F285-4C34-A296-D6D01BA7DAC7</string>
+	<string>8DF575BBCB8CF2510256B5B6D8B053F4E43A3219</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B18AE93B-F285-4C34-A296-D6D01BA7DAC7</string>
+			<string>8DF575BBCB8CF2510256B5B6D8B053F4E43A3219</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SimplySocial</string>
 		</dict>
