@@ -307,45 +307,65 @@ enum {
 //
 - (IBAction)pressFacebookText:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.facebook postText:[self getSampleText]];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.facebook postText:[_strongSelf getSampleText]];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)pressFacebookImage:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.facebook postText:[self getSampleText] withImage:self.sampleImage1];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.facebook postText:[_strongSelf getSampleText] withImage:_strongSelf.sampleImage1];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)pressFacebookImageURL:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.facebook postText:[self getSampleText] withImage:self.sampleImage1 andURL:kSampleURL];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.facebook postText:[_strongSelf getSampleText] withImage:_strongSelf.sampleImage1 andURL:kSampleURL];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)pressFacebookURL:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.facebook postText:[self getSampleText] withURL:kSampleURL];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.facebook postText:[_strongSelf getSampleText] withURL:kSampleURL];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)cancelFacebook:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
         // Clear token
-        [self.facebook cancel];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.facebook cancel];
         
-        // Signal to user 
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Token" message:@"Facebook access token cleared." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+            // Signal to user
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Token" message:@"Facebook access token cleared." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
@@ -355,45 +375,65 @@ enum {
 //
 - (IBAction)pressTwitterText:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.twitter postText:[self getSampleText]];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.twitter postText:[_strongSelf getSampleText]];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)pressTwitterImage:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.twitter postText:[self getSampleText] withImage:self.sampleImage1];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.twitter postText:[_strongSelf getSampleText] withImage:_strongSelf.sampleImage1];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)pressTwitterURL:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.twitter postText:[self getSampleText] withURL:kSampleURL];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.twitter postText:[_strongSelf getSampleText] withURL:kSampleURL];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)pressTwitterImageUrl:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        [self.twitter postText:[self getSampleText] withImage:self.sampleImage1 andURL:kSampleURL];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            [_strongSelf.twitter postText:[_strongSelf getSampleText] withImage:_strongSelf.sampleImage1 andURL:kSampleURL];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
 
 - (IBAction)cancelTwitter:(id)sender {
     // Slight delay (for UI purposes)
+    __weak typeof(self) _weakSelf = self;
     void (^block)(void) = ^{
-        // Clear token
-        [self.twitter cancel];
+        __strong typeof(self) _strongSelf = _weakSelf;
+        if ( _strongSelf ) {
+            // Clear token
+            [self.twitter cancel];
         
-        // Signal to user
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Token" message:@"Twitter access token cleared." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+            // Signal to user
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Clear Token" message:@"Twitter access token cleared." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+        }
     };
     kWrapWithDelay(block, kUIDelay);
 }
@@ -419,10 +459,14 @@ enum {
 }
 
 - (void)updateFacebookButtonState:(BOOL)value {
+    __weak typeof(self) _weakSelf = self;
     self.buttonFacebookCancel.enabled = value;
     [UIView animateWithDuration:kDurationFade
                      animations:^(void) {
-                         self.buttonFacebookCancel.alpha = value ? 1.0f : 0.6f;
+                         __strong typeof(self) _strongSelf = _weakSelf;
+                         if ( _strongSelf ) {
+                             _strongSelf.buttonFacebookCancel.alpha = value ? 1.0f : 0.6f;
+                         }
                      }];
     
 }
@@ -439,10 +483,14 @@ enum {
 }
 
 - (void)updateTwitterButtonState:(BOOL)value {
+    __weak typeof(self) _weakSelf = self;
     self.buttonTwitterCancel.enabled = value;
     [UIView animateWithDuration:kDurationFade
                      animations:^(void) {
-                         self.buttonTwitterCancel.alpha = value ? 1.0f : 0.6f;
+                         __strong typeof(self) _strongSelf = _weakSelf;
+                         if ( _strongSelf) {
+                             self.buttonTwitterCancel.alpha = value ? 1.0f : 0.6f;
+                         }
                      }];
 }
 

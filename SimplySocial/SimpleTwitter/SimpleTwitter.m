@@ -204,9 +204,13 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
             if ( url != nil ) { [tweet addURL:[NSURL URLWithString:url]]; }
             
             // Configure completion handlers
+            __weak typeof(self) _weakSelf = self;
             void (^completionBlock)(void) = ^{
-                if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(targetViewController)] ) {
-                    [self dismissViewController:[self.delegate targetViewController]];
+                __strong typeof(self) _strongSelf = _weakSelf;
+                if ( _strongSelf ) {
+                    if ( _strongSelf.delegate != nil && [_strongSelf.delegate respondsToSelector:@selector(targetViewController)] ) {
+                        [_strongSelf dismissViewController:[_strongSelf.delegate targetViewController]];
+                    }
                 }
             };
             [SimpleTwitter setCompletionHandler:tweet kind:kind completion:completionBlock delegate:self.delegate];

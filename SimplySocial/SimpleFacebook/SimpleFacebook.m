@@ -176,26 +176,30 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
         }
         
         // Configure completion handler
+        __weak typeof(self) _weakSelf = self;
         [fbController setCompletionHandler:^(SLComposeViewControllerResult result) {
-            // Configure output
-            NSString *output = nil;
-            switch ( result ) {
-                case SLComposeViewControllerResultDone:
-                    output = kSimpleFacebookAlertPostSuccess;
-                    break;
-                case SLComposeViewControllerResultCancelled:
-                    break;
-            }
+            __strong typeof(self) _strongSelf = _weakSelf;
+            if ( _strongSelf ) {
+                // Configure output
+                NSString *output = nil;
+                switch ( result ) {
+                    case SLComposeViewControllerResultDone:
+                        output = kSimpleFacebookAlertPostSuccess;
+                        break;
+                    case SLComposeViewControllerResultCancelled:
+                        break;
+                }
             
-            // Present output
-            if ( output != nil ) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:output delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alert show];
-            }
+                // Present output
+                if ( output != nil ) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:output delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                }
             
-            // Dismiss the view controller
-            if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(targetViewController)] ){
-                [self dismissViewController:[self.delegate targetViewController]];
+                // Dismiss the view controller
+                if ( _strongSelf.delegate != nil && [_strongSelf.delegate respondsToSelector:@selector(targetViewController)] ){
+                    [_strongSelf dismissViewController:[_strongSelf.delegate targetViewController]];
+                }
             }
         }];
         
