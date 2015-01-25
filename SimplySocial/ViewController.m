@@ -61,15 +61,14 @@ static void (^kWrapWithDelay)(void (^block)(void),NSTimeInterval delay) = ^(void
 
 static CGFloat kUIDelay = 0.12f;
 
-// Used only for demo purposes
-enum {
+typedef NS_ENUM(NSInteger, kSimpleFacebookConstructorState) {
     kSimpleFacebookConstructorStateInit,
     kSimpleFacebookConstructorStateInitWithAPIKey,
 };
 
-enum {
+typedef NS_ENUM(NSInteger, kSimpleTwitterConstructorState) {
     kSimpleTwitterConstructorStateInit,
-    kSimpleTwitterConstructorStateInitWithApiKeyAndSecret
+    kSimpleTwitterConstructorStateInitWithApiKeyAndSecret,
 };
 
 #pragma mark - Class Extension

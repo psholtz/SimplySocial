@@ -38,9 +38,9 @@
 
 #pragma mark - Class Methods 
 
-+ (void)setCompletionHandler:(id)tweet kind:(kSimpleSocialIOSKind)kind completion:(void (^)(void))completionBlock delegate:(id<SimpleTwitterDelegate>)delegate {
++ (void)setCompletionHandler:(id)tweet kind:(kSimpleSocialIOSVersion)kind completion:(void (^)(void))completionBlock delegate:(id<SimpleTwitterDelegate>)delegate {
 #if _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE
-    if ( kind == kSimpleSocialIOS5 )
+    if ( kind == kSimpleSocialIOSVersion5 )
     {
         [(TWTweetComposeViewController*)tweet setCompletionHandler:^(TWTweetComposeViewControllerResult result) {
             // Determine message
@@ -64,7 +64,7 @@
          }];
     }
     
-    if ( kind == kSimpleSocialISO6 )
+    if ( kind == kSimpleSocialIOSVersion6 )
     {
         [(SLComposeViewController*)tweet setCompletionHandler:^(SLComposeViewControllerResult result) {
             // Determine message

@@ -32,6 +32,6 @@
 
 #pragma mark - Class Methods
 
-+ (void)setCompletionHandler:(id)tweet kind:(kSimpleSocialIOSKind)kind completion:(void (^)(void))completion delegate:(id<SimpleTwitterDelegate>)delegate;
++ (void)setCompletionHandler:(id)tweet kind:(kSimpleSocialIOSVersion)kind completion:(void (^)(void))completion delegate:(id<SimpleTwitterDelegate>)delegate;
 
 @end

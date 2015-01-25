@@ -70,7 +70,7 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 
 // Actual "work" method
 - (void)prepareTwitterPost:(NSString*)text withImages:(NSArray*)images withURL:(NSString*)url;
-- (void)performNativeTwitterPost:(NSString*)text withImages:(NSArray*)images withURL:(NSString*)url kind:(kSimpleSocialIOSKind)kind;
+- (void)performNativeTwitterPost:(NSString*)text withImages:(NSArray*)images withURL:(NSString*)url kind:(kSimpleSocialIOSVersion)kind;
 - (void)performSimpleTwitterPost:(NSString*)text withImages:(NSArray*)images withURL:(NSString*)url;
 
 @end
@@ -160,10 +160,10 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 #if _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE
     // Try to use native code, if available
     if ( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0") ) {
-        [self performNativeTwitterPost:text withImages:images withURL:url kind:kSimpleSocialISO6];
+        [self performNativeTwitterPost:text withImages:images withURL:url kind:kSimpleSocialIOSVersion6];
     }
     else if ( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0") ) {
-        [self performNativeTwitterPost:text withImages:images withURL:url kind:kSimpleSocialIOS5];
+        [self performNativeTwitterPost:text withImages:images withURL:url kind:kSimpleSocialIOSVersion5];
     }
     else {
         [self performSimpleTwitterPost:text withImages:images withURL:url];
@@ -176,15 +176,15 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 //
 // Native Implementation
 //
-- (void)performNativeTwitterPost:(NSString*)text withImages:(NSArray*)images withURL:(NSString*)url kind:(kSimpleSocialIOSKind)kind {
+- (void)performNativeTwitterPost:(NSString*)text withImages:(NSArray*)images withURL:(NSString*)url kind:(kSimpleSocialIOSVersion)kind {
 #if _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE
     // Determine whether to proceed
     BOOL proceed = FALSE;
     switch ( kind ) {
-        case kSimpleSocialIOS5:
+        case kSimpleSocialIOSVersion5:
             proceed = [TWTweetComposeViewController canSendTweet];
             break;
-        case kSimpleSocialISO6:
+        case kSimpleSocialIOSVersion6:
             proceed = [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter];
             break;
     }
@@ -193,10 +193,10 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
         // Configure the tweet sheet
         id tweet = nil;
         switch ( kind ) {
-            case kSimpleSocialIOS5:
+            case kSimpleSocialIOSVersion5:
                 tweet = [[TWTweetComposeViewController alloc] init];
                 break;
-            case kSimpleSocialISO6:
+            case kSimpleSocialIOSVersion6:
                 tweet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
                 break;
         }
@@ -206,10 +206,10 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
             if ( images != nil ) {
                 for ( UIImage *image in images ) {
                     switch ( kind ) {
-                        case kSimpleSocialIOS5:
+                        case kSimpleSocialIOSVersion5:
                             [(TWTweetComposeViewController*)tweet addImage:image];
                             break;
-                        case kSimpleSocialISO6:
+                        case kSimpleSocialIOSVersion6:
                             [(SLComposeViewController*)tweet addImage:image];
                             break;
                     }

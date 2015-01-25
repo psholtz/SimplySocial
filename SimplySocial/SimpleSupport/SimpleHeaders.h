@@ -27,10 +27,10 @@
 //
 // Typedef for determining iOS type
 //
-typedef enum {
-    kSimpleSocialIOS5,
-    kSimpleSocialISO6,
-} kSimpleSocialIOSKind;
+typedef NS_ENUM(NSInteger, kSimpleSocialIOSVersion) {
+    kSimpleSocialIOSVersion5,
+    kSimpleSocialIOSVersion6,
+};
 
 #pragma mark - OS Detection
 
