@@ -27,6 +27,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#pragma mark - Defines
+
 #define _kSIMPLY_SOCIAL_USE_SOUND                 1
 
 #define kSimplySocialExceptionTitle                 @"SimplySocialException"
@@ -35,14 +37,20 @@
 #define kSimplySocialExceptionDelegateDismiss       @"Unable to dimiss UIViewController!"
 #define kSimplySocialExceptionLoadSound             @"Unable to load sound!"
 
+#pragma mark - Class Interface
+
 // =================================================
 // Base class for SimpleFacebook and SimpleTwitter.
 // =================================================
 @interface SimplySocial : NSObject
 
+#pragma mark - Properties
+
 #if _kSIMPLY_SOCIAL_USE_SOUND
 @property (nonatomic, assign) BOOL useSound;
 #endif
+
+#pragma mark - Methods 
 
 - (void)presentViewController:(UIViewController*)parent controller:(UIViewController*)controller;
 - (void)dismissViewController:(UIViewController*)parent;

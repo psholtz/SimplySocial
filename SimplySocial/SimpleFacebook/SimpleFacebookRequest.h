@@ -24,9 +24,15 @@
 //  Created by Paul Sholtz on 2/27/13.
 //
 
+#import <Foundation/Foundation.h>
+
 @class SimpleOperation;
 
+#pragma mark - Class Interface
+
 @interface SimpleFacebookRequest : NSURLRequest
+
+#pragma mark - Class Methods
 
 + (NSURLRequest*)loginRequestWithAPIKey:(NSString*)key;
 + (NSURLRequest*)postRequest:(SimpleOperation*)op token:(NSString*)token;

@@ -30,13 +30,16 @@
 
 #import "OAuth.h"
 
-#pragma mark -
-#pragma mark Private Interface
+#pragma mark - Class Extension
+
 @interface SimpleTwitterLoginViewController ()
 
-@property (nonatomic, strong) NSURLRequest *loginRequest;
+#pragma mark - Properties 
 
+@property (nonatomic, strong) NSURLRequest *loginRequest;
 @property (nonatomic, strong) UIWebView *loadedWebView;
+
+#pragma mark - Methods
 
 - (void)getAccessToken;
 - (void)fetchPreloadedRequest;
@@ -45,9 +48,11 @@
 
 @end
 
-#pragma mark -
-#pragma mark Implementation
+#pragma mark - Class Implementation
+
 @implementation SimpleTwitterLoginViewController
+
+#pragma mark - Constructor
 
 - (id)init {
     // Determine the context
@@ -68,6 +73,8 @@
     }
     return self;
 }
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -124,8 +131,8 @@
     return YES;
 }
 
-#pragma mark -
-#pragma mark Custom Methods
+#pragma mark - Custom Methods
+
 - (void)prepareRequest {
     [self getAccessToken];
     
@@ -135,16 +142,16 @@
     }
 }
 
-#pragma mark -
-#pragma mark IBAction Methods
+#pragma mark Interface Builder Actions
+
 - (IBAction)pressClose:(id)sender{
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(loginViewControllerDidCancel:)] ) {
         [self.delegate loginViewControllerDidCancel:self];
     }
 }
 
-#pragma mark -
-#pragma mark Private Methods
+#pragma mark - Private Methods
+
 - (void)fetchPreloadedRequest {
     // Configure the proxy web view
     self.preloading = YES;
@@ -194,8 +201,8 @@
     return str;
 }
 
-#pragma mark -
-#pragma mark UIWebViewDelegate
+#pragma mark - UIWebView Delegate
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     // callback url, in which case we want to close
     if ( [request.URL.host isEqualToString:[[NSURL URLWithString:self.callbackURL] host]] ) {

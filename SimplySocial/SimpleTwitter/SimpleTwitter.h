@@ -24,8 +24,12 @@
 //  Created by Paul Sholtz on 3/21/13.
 //
 
+#import <Foundation/Foundation.h>
+
 #import "SimplySocial.h"
 #import "SimpleHeaders.h"
+
+#pragma mark - Defines
 
 #warning Don't forget to set your API Key, Secret and Callback URL!
 #define _kSIMPLE_TWITTER_CONSUMER_KEY               @""
@@ -52,14 +56,18 @@
 #define kSimpleTwitterExceptionAPITitle             @"SimpleTwitter: Null API Exception"
 #define kSimpleTwitterExceptionAPIMsg               @"Please furnish a consumer key, a consumer secret and a callback URL!"
 
-#pragma mark -
-#pragma mark Protocol
+#pragma mark - SimpleTwitter Protocol
+
 @protocol SimpleTwitterDelegate <NSObject>
+
+#pragma mark - Required
 
 // The delegate "should" be an instance of UIViewController, or a delegate thereto.
 // This allows us to display login view controllers in the delegate's frame
 @required
 - (UIViewController*)targetViewController;
+
+#pragma mark - Optional
 
 // Option callbacks informing delegate of Twitter state
 @optional
@@ -70,23 +78,31 @@
 
 @end
 
-#pragma mark -
-#pragma mark Interface
+#pragma mark - Class Interface
+
 @interface SimpleTwitter : SimplySocial <NSURLConnectionDelegate>
+
+#pragma mark - Properties
 
 @property (nonatomic, SIMPLE_WEAK) id <SimpleTwitterDelegate> delegate;
 @property (nonatomic, assign) BOOL cacheToken;
 @property (nonatomic, assign) BOOL optimize;
 
+#pragma mark - Constructors 
+
 // Constructors
 - (id)init;
 - (id)initWithAPIKey:(NSString*)apiKey andSecret:(NSString*)secret andCallbackURL:(NSString*)callbackURL;
+
+#pragma mark - Twitter Interface 
 
 // Twitter Interface
 - (void)postText:(NSString*)text;
 - (void)postText:(NSString*)text withImage:(UIImage*)image;
 - (void)postText:(NSString*)text withURL:(NSString*)url;
 - (void)postText:(NSString*)text withImage:(UIImage*)image andURL:(NSString*)url;
+
+#pragma mark - Terminate Session
 
 // Terminate Session
 - (void)cancel;

@@ -26,7 +26,11 @@
 
 #import "SimpleFacebook.h"
 
+#pragma mark - SimpleFacebook Categorty (AccessToken)
+
 @interface SimpleFacebook (AccessToken)
+
+#pragma mark - Properties
 
 @property (nonatomic, copy) NSString *accessToken;
 

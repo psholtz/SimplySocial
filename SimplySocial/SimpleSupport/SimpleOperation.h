@@ -24,12 +24,20 @@
 //  Created by Paul Sholtz on 2/26/13.
 //
 
+#import <Foundation/Foundation.h>
+
+#pragma mark - Class Interface
+
 @interface SimpleOperation : NSObject
+
+#pragma mark - Properties 
 
 @property (nonatomic,assign) int kind;
 @property (nonatomic,copy)   NSString *text;
 @property (nonatomic,copy)   NSString *url;
 @property (nonatomic,strong) NSMutableArray *images;
+
+#pragma mark - Methods
 
 - (void)addImage:(UIImage*)image;
 

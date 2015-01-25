@@ -24,11 +24,17 @@
 //  Created by Paul Sholtz on 3/21/13.
 //
 
+#import <Foundation/Foundation.h>
+
 @class OAuth; 
 
 @class SimpleOperation;
 
+#pragma mark - Class Interface
+
 @interface SimpleTwitterRequest : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+
+#pragma mark - Properties 
 
 @property (nonatomic, strong) NSURL           *url;
 @property (nonatomic, copy)   NSString        *requestMethod;
@@ -39,10 +45,14 @@
 @property (nonatomic, strong) NSMutableData   *responseData;
 @property (nonatomic, strong) NSURLConnection *urlConnection;
 
+#pragma mark - Class Methods
+
 // Static Methods
 + (NSURLRequest*)loginRequestWithOAuth:(OAuth*)oauth;
 + (NSURLRequest*)postRequest:(SimpleOperation*)op oauth:(OAuth*)oauth;
 + (id)requestWithURL:(NSURL *)newURL;
+
+#pragma mark - Instance Methods
 
 // Instance Methods
 - (id)initWithURL:(NSURL *)newURL;

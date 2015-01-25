@@ -26,7 +26,11 @@
 
 #import "SimpleTwitter.h"
 
+#pragma mark - SimpleTwitter Category (CompletionHandlers)
+
 @interface SimpleTwitter (CompletionHandlers)
+
+#pragma mark - Class Methods
 
 + (void)setCompletionHandler:(id)tweet kind:(kSimpleSocialIOSKind)kind completion:(void (^)(void))completion delegate:(id<SimpleTwitterDelegate>)delegate;
 

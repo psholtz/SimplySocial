@@ -26,7 +26,11 @@
 
 #import "SimpleOperation.h"
 
+#pragma mark - Class Implementation
+
 @implementation SimpleOperation
+
+#pragma mark - Methods
 
 - (id)init {
     self = [super init];

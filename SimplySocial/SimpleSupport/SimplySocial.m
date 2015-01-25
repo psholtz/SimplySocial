@@ -40,7 +40,11 @@
 }
 @end
 
+#pragma mark - Class Interface
+
 @implementation SimplySocial
+
+#pragma mark - Constructor
 
 - (id)init {
     self = [super init];
@@ -66,6 +70,8 @@
     }
     return self;
 }
+
+#pragma mark - Methods
 
 - (void)presentViewController:(UIViewController*)parent controller:(UIViewController*)controller {
     if ( [parent respondsToSelector:@selector(presentViewController:animated:completion:)] ) {

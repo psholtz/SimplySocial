@@ -27,12 +27,16 @@
 #import "SimpleFacebook.h"
 #import "SimpleFacebookLoginViewController.h"
 
-#pragma mark -
-#pragma mark Private Interface
+#pragma mark - Class Extension
+
 @interface SimpleFacebookLoginViewController ()
+
+#pragma mark - Properties
 
 @property (nonatomic, strong) NSURLRequest *loginRequest;
 @property (nonatomic, strong) UIWebView *loadedWebView;
+
+#pragma mark - Methods
 
 - (void)fetchPreloadedRequest;
 - (void)fetchStandardRequest;
@@ -40,9 +44,11 @@
 
 @end
 
-#pragma mark -
-#pragma mark Implementation
+#pragma mark - Class Implementation
+
 @implementation SimpleFacebookLoginViewController
+
+#pragma mark - Constructor
 
 - (id)init {
     // Determine the context
@@ -63,6 +69,8 @@
     }
     return self;
 }
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -130,8 +138,8 @@
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 }
 
-#pragma mark -
-#pragma mark Custom Methods
+#pragma mark - Custom Methods
+
 - (void)prepareWithRequest:(NSURLRequest*)theRequest {
     self.loginRequest = theRequest;
     if ( self.usePreloading ) {
@@ -164,16 +172,16 @@
     [self.webView loadRequest:self.loginRequest];
 }
 
-#pragma mark -
-#pragma mark IBAction Methods
+#pragma mark Interface Builder Actions
+
 - (IBAction)pressClose:(id)sender {
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(loginViewControllerDidCancel:)]) {
         [self.delegate loginViewControllerDidCancel:self];
     }
 }
 
-#pragma mark -
-#pragma mark Private Methods
+#pragma mark - Private Methods
+
 - (NSString*)getStringFromURL:(NSURL*)url forKey:(NSString*)key {
     NSString *absoluteString = url.absoluteString;
     NSString * str = nil;
@@ -199,8 +207,8 @@
     return str;
 }
 
-#pragma mark -
-#pragma mark Web Delegate
+#pragma mark - Web Delegate
+
 - (BOOL)webView:(UIWebView *)theView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     // Branch 1

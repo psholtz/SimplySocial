@@ -47,14 +47,18 @@ static const NSString *kParamTwitterApiKey      = @"twitterApiKey";
 static const NSString *kParamTwitterSecret      = @"twitterSecret";
 static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 
-#pragma mark -
-#pragma mark Internal Interface
+#pragma mark - Class Extension
+
 @interface SimpleTwitter () <SimpleTwitterLoginViewControllerDelegate, OAuthTwitterCallbacks>
+
+#pragma mark - Properties
 
 @property (nonatomic, strong) SimpleQueue *queue;
 @property (nonatomic, strong) OAuth *oAuth;
 @property (nonatomic, copy)   NSString *callbackURL;
 @property (nonatomic, strong) SimpleTwitterLoginViewController *login;
+
+#pragma mark - Methods
 
 // Supporting methods
 - (void)configure:(NSDictionary*)params;
@@ -71,7 +75,11 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 
 @end
 
+#pragma mark - Class Implementation
+
 @implementation SimpleTwitter
+
+#pragma mark - Constructors 
 
 // ------------
 // Constructors
@@ -112,6 +120,8 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
     self.optimize = TRUE;
 }
 
+#pragma mark - Twitter Interface 
+
 // -----------------
 // Twitter Interface
 // -----------------
@@ -131,12 +141,16 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
     [self prepareTwitterPost:text withImages:[NSArray arrayWithObject:image] withURL:url];
 }
 
+#pragma mark - Cancel
+
 // -----
 // Close
 // -----
 - (void)cancel {
     self.oAuth.oauth_token_authorized = NO;
 }
+
+#pragma mark - Internal Twitter Methods
 
 // ----------------
 // Internal Methods
@@ -254,8 +268,8 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
     }
 }
 
-#pragma mark -
-#pragma mark Internal Methods
+#pragma mark - Internal Methods
+
 - (void)prepareLoginViewController {
     // Must have a delegate to proceed
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(targetViewController)] ) {
@@ -348,8 +362,8 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
     }
 }
 
-#pragma mark -
-#pragma mark Twitter Web/Login Delegate
+#pragma mark - Twitter Web/Login Delegate
+
 - (void)loginViewControllerDidSucceed:(id)sender {    
     // Signal to delegate
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(simpleTwitterDidLogin:)] )  {
@@ -415,8 +429,8 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
     }
 }
 
-#pragma mark - 
-#pragma mark Twitter OAuth Callbacks
+#pragma mark - Twitter OAuth Callbacks
+
 - (void) requestTwitterTokenDidSucceed:(OAuth *)oAuth {
 #if _kSIMPLE_TWITTER_DEBUG
     NSLog(@"++ Twitter Request Token did succeed");
@@ -441,8 +455,8 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
 #endif
 }
 
-#pragma mark -
-#pragma mark NSURLConnection Delegate
+#pragma mark - NSURLConnection Delegate
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
     // Manage the cache
     if ( !self.cacheToken ) { self.oAuth.oauth_token_authorized = NO; }

@@ -26,23 +26,27 @@
 
 #import "SimpleQueue.h"
 
-#pragma mark -
-#pragma mark Private Interface
+#pragma mark - Class Extension
+
 @interface SimpleQueue()
 
+#pragma mark - Properties 
+
 @property (nonatomic, strong) NSMutableArray *queue;
+
+#pragma mark - Methods
 
 - (void)configure:(NSArray*)array;
 
 @end
 
-#pragma mark -
-#pragma mark Implementation
+#pragma mark - Class Implementation
+
 @implementation SimpleQueue
 
+#pragma mark - Constructors
+
 // Constructors
-#pragma mark -
-#pragma mark Constructors
 - (id)init {
     self = [super init];
     if ( self ) {
@@ -63,9 +67,9 @@
     _queue = [[NSMutableArray alloc] initWithArray:array];
 }
 
+#pragma mark - Stack Operations
+
 // Stack operations
-#pragma mark -
-#pragma mark Stack Operations
 - (void)enqueueObj:(id)obj {
     if ( obj ) {
         [_queue addObject:obj];
@@ -107,8 +111,8 @@
     return (int)[_queue count];
 }
 
-#pragma mark -
-#pragma mark NSFastEnumeration
+#pragma mark - NSFastEnumeration
+
 // Not really necessary, but fun to have
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id [])buffer count:(NSUInteger)len {
     return [_queue countByEnumeratingWithState:state objects:buffer count:len];

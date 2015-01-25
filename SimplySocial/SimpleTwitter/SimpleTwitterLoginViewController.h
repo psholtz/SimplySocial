@@ -24,11 +24,15 @@
 //  Created by Paul Sholtz on 3/21/13.
 //
 
+#import <UIKit/UIKit.h>
+
 @class OAuth;
 
-#pragma mark -
-#pragma mark Protocol
+#pragma mark - SimpleTwitterLoginViewController Protocol
+
 @protocol SimpleTwitterLoginViewControllerDelegate <NSObject>
+
+#pragma mark - Required
 
 @required
 - (void)loginViewControllerDidSucceed:(id)sender;
@@ -38,8 +42,8 @@
 
 @end
 
-#pragma mark -
-#pragma mark Interface
+#pragma mark - Class Interface
+
 @interface SimpleTwitterLoginViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, SIMPLE_WEAK) id<SimpleTwitterLoginViewControllerDelegate> delegate;
@@ -51,12 +55,12 @@
 @property (nonatomic, assign) BOOL preloading;
 @property (nonatomic, copy)   NSString *callbackURL;
 
-#pragma mark -
-#pragma mark IBAction Methods
+#pragma mark - Interface Builder Actions
+
 - (IBAction)pressClose:(id)sender;
 
-#pragma mark -
-#pragma mark Custom Methods
+#pragma mark - Custom Methods
+
 - (void)prepareRequest;
 
 @end

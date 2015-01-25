@@ -32,7 +32,11 @@
 #import <Accounts/Accounts.h>
 #endif // _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE
 
+#pragma mark - SimpleTwitter Category (CompletionHandlers)
+
 @implementation SimpleTwitter (CompletionHandlers)
+
+#pragma mark - Class Methods 
 
 + (void)setCompletionHandler:(id)tweet kind:(kSimpleSocialIOSKind)kind completion:(void (^)(void))completionBlock delegate:(id<SimpleTwitterDelegate>)delegate {
 #if _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE

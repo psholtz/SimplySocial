@@ -28,10 +28,15 @@
 
 #import "ViewController.h"
 
+#import "SimpleHeaders.h"
 #import "SimpleFacebook.h"
 #import "SimpleFacebook+AccessToken.h"
-
 #import "SimpleTwitter.h"
+
+#pragma mark - Defines 
+
+#define _kSIMPLE_FACEBOOK_CONSTRUCTOR_STATE    kSimpleFacebookConstructorStateInitWithAPIKey
+#define _kSIMPLE_TWITTER_CONSTRUCTOR_STATE     kSimpleTwitterConstructorStateInitWithApiKeyAndSecret
 
 #define kKBLabelColor1 [UIColor colorWithWhite:0.5f alpha:1.0f];
 #define kKBLabelColor2 [UIColor colorWithWhite:0.5f alpha:0.6f];
@@ -48,7 +53,9 @@ static void (^kWrapWithDelay)(void (^block)(void),NSTimeInterval delay) = ^(void
     double delayInSeconds =  delay;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        block();
+        if ( block ) {
+            block();
+        }
     });
 };
 
@@ -65,31 +72,69 @@ enum {
     kSimpleTwitterConstructorStateInitWithApiKeyAndSecret
 };
 
-#define _kSIMPLE_FACEBOOK_CONSTRUCTOR_STATE    kSimpleFacebookConstructorStateInitWithAPIKey
-#define _kSIMPLE_TWITTER_CONSTRUCTOR_STATE     kSimpleTwitterConstructorStateInitWithApiKeyAndSecret
+#pragma mark - Class Extension
 
-#pragma mark -
-#pragma mark Private Interface
 @interface ViewController () <SimpleFacebookDelegate, SimpleTwitterDelegate>
+
+#pragma mark - Interface Builder Outlets
+
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIView *facebookPanel;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIView *twitterPanel;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIPageControl *pageControl;
+
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookText;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookURL;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookImage;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookImageURL;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookCancel;
+
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterText;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterURL;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterImage;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterImageURL;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterCancel;
+
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UISwitch * switchFacebook;
+@property (nonatomic, SIMPLE_WEAK) IBOutlet UISwitch * switchTwitter;
+
+#pragma mark - Interface Builder Actions
+
+// Facebook
+- (IBAction)pressFacebookText:(id)sender;
+- (IBAction)pressFacebookURL:(id)sender;
+- (IBAction)pressFacebookImage:(id)sender;
+- (IBAction)pressFacebookImageURL:(id)sender;
+- (IBAction)cancelFacebook:(id)sender;
+
+// Twitter
+- (IBAction)pressTwitterText:(id)sender;
+- (IBAction)pressTwitterURL:(id)sender;
+- (IBAction)pressTwitterImage:(id)sender;
+- (IBAction)pressTwitterImageUrl:(id)sender;
+- (IBAction)cancelTwitter:(id)sender;
+
+// UIPageControl
+- (IBAction)changePage:(id)sender;
+
+// Supporting Methods
+- (IBAction)toggleFacebookToken:(id)sender;
+- (IBAction)toggleTwitterToken:(id)sender;
+
+#pragma mark - Properties 
 
 @property (nonatomic, strong) UIImage *sampleImage1;
 @property (nonatomic, strong) SimpleFacebook *facebook;
 @property (nonatomic, strong) SimpleTwitter *twitter;
 
-- (NSString*)getSampleText;
-
-- (void)deviceOrientationDidChange:(NSNotification*)notification;
-- (void)handleChangetoLandscape;
-- (void)handleChangeToPortrait;
-
 @end
+
+#pragma mark - Class Implementation
 
 @implementation ViewController
 
-#pragma mark -
-#pragma mark View Lifecycle
-- (void)viewDidLoad
-{
+#pragma mark - View Lifecycle
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     // Prepare the sample image(s)
@@ -288,8 +333,8 @@ enum {
     }
 }
 
-#pragma mark -
-#pragma mark UIScrollView Delegate
+#pragma mark - UIScrollView Delegate
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scroller {
     self.pageControl.currentPage = (scroller.contentOffset.x / (scroller.contentSize.width / self.pageControl.numberOfPages));
 }
@@ -300,8 +345,8 @@ enum {
     [self.scrollView scrollRectToVisible:CGRectMake(x, 0, pageWidth, self.scrollView.frame.size.height) animated:YES];
 }
 
-#pragma mark -
-#pragma mark IBAction Methods
+#pragma mark - IBAction Methods
+
 //
 // Facebook
 //
@@ -494,14 +539,13 @@ enum {
                      }];
 }
 
-#pragma mark -
-#pragma mark Private Methods
+#pragma mark - Private Methods
+
 - (NSString*)getSampleText {
     return [NSString stringWithFormat:@"Test message: %f", [[NSDate date] timeIntervalSince1970]];
 }
 
-#pragma mark -
-#pragma mark Simple Facebook Delegate
+#pragma mark - Simple Facebook Delegate
 ////////////////////////////////////////////////////////
 // Required Simple Facebook and Twitter Delegates
 - (UIViewController*)targetViewController {
@@ -546,8 +590,9 @@ enum {
 
 ///////////////////////////////////////////////////////////
 // Optional Simple Twitter Delegates
-#pragma mark -
-#pragma mark Simple Twitter Delegate
+
+#pragma mark - SimpleTwitter Delegate
+
 - (void)simpleTwitterDidLogin:(id)sender {
 #if _kSIMPLE_TWITTER_DEBUG
     NSLog(@"++ Twitter did login");

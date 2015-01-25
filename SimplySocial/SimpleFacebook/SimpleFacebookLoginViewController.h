@@ -24,9 +24,13 @@
 //  Created by Paul Sholtz on 2/27/13.
 //
 
-#pragma mark -
-#pragma mark Protocol
+#import <UIKit/UIKit.h>
+
+#pragma mark - SimpleFacebookLoginViewController Protocol
+
 @protocol SimpleFacebookLoginViewControllerDelegate <NSObject>
+
+#pragma mark - Required
 
 @required
 - (void)loginViewControllerDidFinish:(UIViewController*)controller withToken:(NSString*)token;
@@ -36,9 +40,11 @@
 
 @end
 
-#pragma mark -
-#pragma mark Interface
+#pragma mark - Class Interface
+
 @interface SimpleFacebookLoginViewController : UIViewController <UIWebViewDelegate>
+
+#pragma mark - Properties 
 
 @property (nonatomic, SIMPLE_WEAK) id<SimpleFacebookLoginViewControllerDelegate> delegate;
 @property (nonatomic, SIMPLE_WEAK) IBOutlet UIWebView *webView;
@@ -47,13 +53,12 @@
 @property (nonatomic, assign) BOOL usePreloading;
 @property (nonatomic, assign) BOOL preloading;
 
-#pragma mark -
-#pragma mark IBAction Methods
+#pragma mark - Interface Builder Actions
+
 - (IBAction)pressClose:(id)sender;
 
-#pragma mark -
-#pragma mark Custom Methods
-- (void)prepareWithRequest:(NSURLRequest*)request;
+#pragma mark - Custom Methods
 
+- (void)prepareWithRequest:(NSURLRequest*)request;
 
 @end

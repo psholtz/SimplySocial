@@ -26,56 +26,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SimpleHeaders.h"
+#pragma mark - Class Interface 
 
 @interface ViewController : UIViewController <UIScrollViewDelegate>
-
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIView *facebookPanel;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIView *twitterPanel;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIPageControl *pageControl;
-
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookText;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookURL;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookImage;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookImageURL;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonFacebookCancel;
-
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterText;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterURL;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterImage;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterImageURL;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UIButton * buttonTwitterCancel;
-
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UISwitch * switchFacebook;
-@property (nonatomic, SIMPLE_WEAK) IBOutlet UISwitch * switchTwitter;
-
-#pragma mark -
-#pragma mark IBAction Methods
-// Facebook
-- (IBAction)pressFacebookText:(id)sender;
-- (IBAction)pressFacebookURL:(id)sender;
-- (IBAction)pressFacebookImage:(id)sender;
-- (IBAction)pressFacebookImageURL:(id)sender;
-- (IBAction)cancelFacebook:(id)sender;
-
-// Twitter
-- (IBAction)pressTwitterText:(id)sender;
-- (IBAction)pressTwitterURL:(id)sender;
-- (IBAction)pressTwitterImage:(id)sender;
-- (IBAction)pressTwitterImageUrl:(id)sender;
-- (IBAction)cancelTwitter:(id)sender;
-
-// Supporting Methods
-- (IBAction)toggleFacebookToken:(id)sender;
-- (IBAction)toggleTwitterToken:(id)sender;
-
-- (void)updateFacebookButton:(id)sender;
-- (void)updateFacebookButtonState:(BOOL)value;
-- (void)updateTwitterButton:(id)sender;
-- (void)updateTwitterButtonState:(BOOL)value;
-
-// UIPageControl
-- (IBAction)changePage:(id)sender;
-
 @end

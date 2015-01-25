@@ -32,23 +32,27 @@
 
 #import "NSString+URLEncoding.h"
 
-#pragma mark -
-#pragma mark Private Interface
+#pragma mark - Class Extension
+
 @interface SimpleTwitterRequest ()
+
+#pragma mark - Properties 
 
 @property (nonatomic, strong) NSMutableDictionary *requestHeaders;
 @property (nonatomic)         BOOL requestFinished;
+
+#pragma mark - Methods
 
 + (NSURL*)generateURL:(NSString*)baseURL params:(NSDictionary*)params;
 
 @end
 
-#pragma mark -
-#pragma mark Implementation
+#pragma mark - Class Implementation
+
 @implementation SimpleTwitterRequest
 
-#pragma mark -
-#pragma mark Static Methods
+#pragma mark - Class Methods
+
 + (NSURLRequest*)loginRequestWithOAuth:(OAuth*)oauth {
     NSDictionary *params= @{kSimpleTwitterOAuthTokenKey : oauth.oauth_token};
     NSURL *url = [SimpleTwitterRequest generateURL:kSimpleTwitterAuthorizeURL params:params];
@@ -140,8 +144,8 @@
     return [[self alloc] initWithURL:newURL];
 }
 
-#pragma mark -
-#pragma mark Instance Methods
+#pragma mark - Constructor
+
 // Constructors
 - (id)initWithURL:(NSURL *)newURL {
     self = [super init];
@@ -152,6 +156,8 @@
     }
     return self;
 }
+
+#pragma mark - Instance Methods
 
 - (void)addRequestHeader:(NSString *)header value:(NSString *)value {
     if (!self.requestHeaders) self.requestHeaders = [NSMutableDictionary dictionary];
@@ -179,7 +185,6 @@
     }
 }
 
-#pragma mark -
 #pragma mark - NSURLConnectionDataDelegate
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     self.error = error;

@@ -32,6 +32,8 @@ typedef enum {
     kSimpleSocialISO6,
 } kSimpleSocialIOSKind;
 
+#pragma mark - OS Detection
+
 //
 // Macros for detecting iOS version
 //
@@ -41,6 +43,8 @@ typedef enum {
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
+#pragma mark - Hardware Detection
+
 //
 // Macros for hardware detection
 //
@@ -48,6 +52,8 @@ typedef enum {
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define IS_IPHONE_5 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
 #define IS_IPHONE_4 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 480.0f)
+
+#pragma mark - Weak Linking
 
 //
 // Macro for weak linking, in case we want to support 4.3 and before
@@ -61,6 +67,8 @@ typedef enum {
 #define SIMPLE_WEAK assign
 #endif
 #endif  
+
+#pragma mark - Static Inline Methods
 
 //
 // Due to Wil Shipley, whose link now seems to be dead.

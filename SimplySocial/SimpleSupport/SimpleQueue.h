@@ -24,12 +24,20 @@
 //  Created by Paul Sholtz on 2/26/13.
 //
 
+#import <Foundation/Foundation.h>
+
 @interface SimpleQueue : NSObject <NSFastEnumeration>
+
+#pragma mark - Properties 
 
 @property (nonatomic, assign, readonly) int size;
 
+#pragma mark - Constructors 
+
 // Constructors
 - (id)initWithArray:(NSArray*)array;
+
+#pragma mark - Methods 
 
 // Stack operations
 - (void)enqueueObj:(id)obj;

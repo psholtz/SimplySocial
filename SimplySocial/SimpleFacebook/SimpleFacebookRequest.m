@@ -28,7 +28,11 @@
 #import "SimpleFacebookRequest.h"
 #import "SimpleOperation.h"
 
+#pragma mark - Class Implementation
+
 @implementation SimpleFacebookRequest
+
+#pragma mark - Class Methods
 
 + (NSURLRequest*)loginRequestWithAPIKey:(NSString*)key {
     NSString *path = [kSimpleFacebookLoginURL stringByAppendingString:key];

@@ -24,13 +24,17 @@
 //  Created by Paul Sholtz on 2/26/13.
 //
 
-#import "SimpleFacebook+AccessToken.h"
-
 #import <objc/runtime.h>
+
+#import "SimpleFacebook+AccessToken.h"
 
 static char accessTokenKey;
 
+#pragma mark - SimpleFacebook Category (AccessToken)
+
 @implementation SimpleFacebook (AccessToken)
+
+#pragma mark - Accessors
 
 - (NSString*)accessToken {
     NSString *token = objc_getAssociatedObject(self, &accessTokenKey);

@@ -43,32 +43,23 @@
 static const NSString *kParamFacebookApiKey     = @"fbApiKey";
 static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
 
-#pragma mark -
-#pragma mark Internal Interface
+#pragma mark - Class Extension 
+
 @interface SimpleFacebook () <SimpleFacebookLoginViewControllerDelegate>
+
+#pragma mark - Properties
 
 @property (nonatomic, copy)   NSString          *apiKey;
 @property (nonatomic, strong) SimpleQueue       *queue;
 @property (nonatomic, strong) SimpleFacebookLoginViewController *login;
 
-// Supporting methods
-- (void)configure:(NSDictionary*)params;
-- (void)prepareLoginViewController;
-- (void)presentLoginViewController;
-- (void)process:(SimpleOperation*)op token:(NSString*)token;
-- (void)processQueue:(NSString*)token;
-- (void)dismissLoginViewController;
-
-// Actual "work" method
-- (void)prepareFacebookPost:(NSString*)text images:(NSArray*)images url:(NSString*)url;
-- (void)performNativeFacebookPost:(NSString*)text images:(NSArray*)images url:(NSString*)url;
-- (void)performSimpleFacebookPost:(NSString*)text images:(NSArray*)images url:(NSString*)url;
-
 @end
 
-#pragma mark - 
-#pragma mark Facebook Implementation
+#pragma mark - Class Implementation
+
 @implementation SimpleFacebook
+
+#pragma mark - Accessors
 
 // Returns true when the "Loading.." HUD is onscreen
 - (BOOL)preloading {
@@ -77,6 +68,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     }
     return NO;
 }
+
+#pragma mark - Constructors
 
 // ------------ 
 // Constructors
@@ -112,6 +105,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     self.optimize = TRUE;
 }
 
+#pragma mark - Facebook Interface
+
 // ------------
 // FB Interface
 // ------------
@@ -131,6 +126,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     [self prepareFacebookPost:text images:[NSArray arrayWithObject:image] url:url];
 }
 
+#pragma mark - Cancel
+
 // -----
 // Close
 // -----
@@ -138,6 +135,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     self.accessToken = nil;
     [self.queue clear];
 }
+
+#pragma mark - Internal Facebook Methods
 
 // ----------------
 // Internal Methods
@@ -241,8 +240,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     }
 }
 
-#pragma mark -
-#pragma mark Internal Methods
+#pragma mark - Internal Methods
+
 - (void)prepareLoginViewController {
     // Must have a delegate to proceed
     if ( self.delegate != nil && [self.delegate respondsToSelector:@selector(targetViewController)] ) {
@@ -322,8 +321,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     }
 }
 
-#pragma mark -
-#pragma mark Facebook Web Delegate
+#pragma mark - Facebook Web Delegate
+
 - (void)loginViewControllerDidFinish:(UIViewController*)controller withToken:(NSString*)token {
     // Signal to delegate
     self.accessToken = self.cacheToken ? token : nil;
@@ -391,8 +390,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
     }
 }
 
-#pragma mark -
-#pragma mark NSURLConnection Delegate
+#pragma mark - NSURLConnection Delegate
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
     switch (response.statusCode) {
         // GOOD
