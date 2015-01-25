@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		863685881A74D03900584835 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 863685861A74D03900584835 /* Localizable.strings */; };
 		8642959E1700F14500EDA803 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8642959D1700F14500EDA803 /* MBProgressHUD.m */; };
 		864295A31700F1CD00EDA803 /* Saturn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 864295A21700F1CD00EDA803 /* Saturn1.jpg */; };
 		864295A41700F1CD00EDA803 /* Saturn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 864295A21700F1CD00EDA803 /* Saturn1.jpg */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		863685871A74D03900584835 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8642959C1700F14500EDA803 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		8642959D1700F14500EDA803 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		864295A21700F1CD00EDA803 /* Saturn1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Saturn1.jpg; path = Samples/Saturn1.jpg; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863685851A74D00800584835 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				863685861A74D03900584835 /* Localizable.strings */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
 		8642959B1700F13200EDA803 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +316,7 @@
 		869DB40F16DD3DA600B90E5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				863685851A74D00800584835 /* en.lproj */,
 				869D4B7616E127D900952C75 /* Icon.png */,
 				869D4B7716E127D900952C75 /* Icon@2x.png */,
 				869D4B7816E127D900952C75 /* Icon-72.png */,
@@ -453,6 +464,7 @@
 				8646240616E02B8F009F8E7F /* SimpleFacebookLoginViewController_iPhone5.xib in Resources */,
 				869D4B7916E127D900952C75 /* Icon.png in Resources */,
 				869D4B7A16E127D900952C75 /* Icon@2x.png in Resources */,
+				863685881A74D03900584835 /* Localizable.strings in Resources */,
 				869D4B7B16E127D900952C75 /* Icon-72.png in Resources */,
 				869D4B7D16E12A6500952C75 /* Icon-72@2x.png in Resources */,
 				864295A31700F1CD00EDA803 /* Saturn1.jpg in Resources */,
@@ -542,6 +554,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		863685861A74D03900584835 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				863685871A74D03900584835 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		869DB41116DD3DA600B90E5F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

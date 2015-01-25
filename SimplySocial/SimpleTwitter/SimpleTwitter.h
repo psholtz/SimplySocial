@@ -47,14 +47,13 @@
 #define kSimpleTwitterTimeout                       30
 
 // Users can redefine these as desired
-#define kSimpleTwitterAlertTitle                    @"Twitter"
-#define kSimpleTwitterAlertLoginFail                @"Could not load login screen."
-#define kSimpleTwitterAlertPostSuccess              @"Tweet Successful!"
-#define kSimpleTwitterAlertPostFail                 @"Tweet failed, please try again later."
-#define kSimpleTwitterAlertNoService                @"Twitter service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup."
-
-#define kSimpleTwitterExceptionAPITitle             @"SimpleTwitter: Null API Exception"
-#define kSimpleTwitterExceptionAPIMsg               @"Please furnish a consumer key, a consumer secret and a callback URL!"
+#define kSimpleTwitterAlertTitle                    NSLocalizedString(@"Twitter", nil)
+#define kSimpleTwitterAlertLoginFail                NSLocalizedString(@"Could not load login screen.", nil)
+#define kSimpleTwitterAlertPostSuccess              NSLocalizedString(@"Tweet Successful!", nil)
+#define kSimpleTwitterAlertPostFail                 NSLocalizedString(@"Tweet failed, please try again later.", nil)
+#define kSimpleTwitterAlertNoService                NSLocalizedString(@"Twitter service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup.", nil)
+#define kSimpleTwitterExceptionAPITitle             NSLocalizedString(@"SimpleTwitter: Null API Exception", nil)
+#define kSimpleTwitterExceptionAPIMsg               NSLocalizedString(@"Please furnish a consumer key, a consumer secret and a callback URL!", nil)
 
 #pragma mark - SimpleTwitter Protocol
 

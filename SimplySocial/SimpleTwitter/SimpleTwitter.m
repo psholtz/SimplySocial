@@ -238,7 +238,7 @@ static const NSString *kParamTwitterCallbackURL = @"twitterCallbackURL";
         }
     } else {
         // Signal error condition for no service
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:kSimpleTwitterAlertNoService delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:kSimpleTwitterAlertNoService delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles: nil];
         [alert show];
     }
 #endif   // _kSIMPLE_TWITTER_USE_NATIVE_IF_AVAILABLE

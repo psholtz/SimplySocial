@@ -41,14 +41,13 @@
 #define kSimpleFacebookPostImage                    @"https://graph.facebook.com/me/photos"
 
 // Users can redefine these as desired
-#define kSimpleFacebookAlertTitle                   @"Facebook"
-#define kSimpleFacbeookAlertLoginFail               @"Could not load login screen."
-#define kSimpleFacebookAlertPostSuccess             @"Post Successful!"
-#define kSimpleFacebookAlertPostFail                @"Post failed, please try again later."
-#define kSimpleFacebookAlertNoService               @"Facebook Service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup."
-
-#define kSimpleFacebookExceptionAPITitle            @"SimpleFacebook: Null API Exception"
-#define kSimpleFacebookExceptionAPIMsg              @"Please furnish an API key!"
+#define kSimpleFacebookAlertTitle                   NSLocalizedString(@"Facebook", nil)
+#define kSimpleFacbeookAlertLoginFail               NSLocalizedString(@"Could not load login screen.", nil)
+#define kSimpleFacebookAlertPostSuccess             NSLocalizedString(@"Post Successful!", nil)
+#define kSimpleFacebookAlertPostFail                NSLocalizedString(@"Post failed, please try again later.", nil)
+#define kSimpleFacebookAlertNoService               NSLocalizedString(@"Facebook Service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup.", nil)
+#define kSimpleFacebookExceptionAPITitle            NSLocalizedString(@"SimpleFacebook: Null API Exception", nil)
+#define kSimpleFacebookExceptionAPIMsg              NSLocalizedString(@"Please furnish an API key!", nil)
 
 #pragma mark - SimpleFacebook Protocol
 
