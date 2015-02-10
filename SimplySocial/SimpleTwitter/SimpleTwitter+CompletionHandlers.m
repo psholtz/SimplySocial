@@ -55,7 +55,8 @@
             
             // Present message
             if ( output != nil ) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:output delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:output delegate:nil cancelButtonTitle:lblCancel otherButtonTitles:nil];
                 [alert show];
             }
             
@@ -79,7 +80,8 @@
             
             // Present message
             if ( output != nil ) {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:output delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:output delegate:nil cancelButtonTitle:lblCancel otherButtonTitles:nil];
                 [alert show];
             }
             

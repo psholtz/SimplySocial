@@ -68,6 +68,10 @@ typedef NS_ENUM(NSInteger, kSimpleSocialIOSVersion) {
 #endif
 #endif  
 
+#pragma mark - Bundle
+
+#define KB_MAIN_BUNDLE  [NSBundle bundleForClass:[SimplySocial class]]
+
 #pragma mark - Static Inline Methods
 
 //

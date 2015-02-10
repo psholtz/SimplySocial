@@ -191,7 +191,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
             
                 // Present output
                 if ( output != nil ) {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:output delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+                    NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:output delegate:nil cancelButtonTitle:lblCancel otherButtonTitles:nil];
                     [alert show];
                 }
             
@@ -210,7 +211,8 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
         }
     } else {
         // Signal error condition for no service
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacebookAlertNoService delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles: nil];
+        NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacebookAlertNoService delegate:nil cancelButtonTitle:lblCancel otherButtonTitles: nil];
         [alert show];
     }
 #endif // _kSIMPLE_FACEBOOK_USE_NATIVE_IF_AVAILABLE
@@ -255,7 +257,7 @@ static const NSString *kParamFacebookCacheToken = @"fbCacheToken";
         if ( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0") ) {
             // Prepare the HUD
             MBProgressHUD * hud = [MBProgressHUD showHUDAddedTo:[self.delegate targetViewController].view animated:YES];
-            hud.labelText = NSLocalizedString(@"Loading", nil);
+            hud.labelText = NSLocalizedStringFromTableInBundle(@"Loading", nil, KB_MAIN_BUNDLE, nil);
             hud.dimBackground = YES;
 
             // Start loading the login screen

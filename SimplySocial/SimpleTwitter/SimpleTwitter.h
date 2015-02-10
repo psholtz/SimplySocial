@@ -47,13 +47,13 @@
 #define kSimpleTwitterTimeout                       30
 
 // Users can redefine these as desired
-#define kSimpleTwitterAlertTitle                    NSLocalizedString(@"Twitter", nil)
-#define kSimpleTwitterAlertLoginFail                NSLocalizedString(@"Could not load login screen.", nil)
-#define kSimpleTwitterAlertPostSuccess              NSLocalizedString(@"Tweet Successful!", nil)
-#define kSimpleTwitterAlertPostFail                 NSLocalizedString(@"Tweet failed, please try again later.", nil)
-#define kSimpleTwitterAlertNoService                NSLocalizedString(@"Twitter service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup.", nil)
-#define kSimpleTwitterExceptionAPITitle             NSLocalizedString(@"SimpleTwitter: Null API Exception", nil)
-#define kSimpleTwitterExceptionAPIMsg               NSLocalizedString(@"Please furnish a consumer key, a consumer secret and a callback URL!", nil)
+#define kSimpleTwitterAlertTitle                    NSLocalizedStringFromTableInBundle(@"Twitter", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleTwitterAlertLoginFail                NSLocalizedStringFromTableInBundle(@"Could not load login screen.", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleTwitterAlertPostSuccess              NSLocalizedStringFromTableInBundle(@"Tweet Successful!", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleTwitterAlertPostFail                 NSLocalizedStringFromTableInBundle(@"Tweet failed, please try again later.", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleTwitterAlertNoService                NSLocalizedStringFromTableInBundle(@"Twitter service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup.", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleTwitterExceptionAPITitle             NSLocalizedStringFromTableInBundle(@"SimpleTwitter: Null API Exception", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleTwitterExceptionAPIMsg               NSLocalizedStringFromTableInBundle(@"Please furnish a consumer key, a consumer secret and a callback URL!", nil, KB_MAIN_BUNDLE, nil)
 
 #pragma mark - SimpleTwitter Protocol
 

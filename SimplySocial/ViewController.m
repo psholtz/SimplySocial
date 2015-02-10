@@ -407,9 +407,9 @@ typedef NS_ENUM(NSInteger, kSimpleTwitterConstructorState) {
             [_strongSelf.facebook cancel];
         
             // Signal to user
-            NSString * lblClearTokenTitle = NSLocalizedString(@"Clear Token", nil);
-            NSString * lblClearTokenMsg   = NSLocalizedString(@"Facebook access token cleared.", nil);
-            NSString * lblOK = NSLocalizedString(@"OK", nil);
+            NSString * lblClearTokenTitle = NSLocalizedStringFromTableInBundle(@"Clear Token", nil, KB_MAIN_BUNDLE, nil);
+            NSString * lblClearTokenMsg   = NSLocalizedStringFromTableInBundle(@"Facebook access token cleared.", nil, KB_MAIN_BUNDLE, nil);
+            NSString * lblOK = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:lblClearTokenTitle message:lblClearTokenMsg delegate:nil cancelButtonTitle:lblOK otherButtonTitles: nil];
             [alert show];
         }
@@ -478,9 +478,9 @@ typedef NS_ENUM(NSInteger, kSimpleTwitterConstructorState) {
             [self.twitter cancel];
         
             // Signal to user
-            NSString * lblClearTokenTitle = NSLocalizedString(@"Clear Token", nil);
-            NSString * lblClearTokenMsg   = NSLocalizedString(@"Twitter access token cleared.", nil);
-            NSString * lblOK = NSLocalizedString(@"OK", nil);
+            NSString * lblClearTokenTitle = NSLocalizedStringFromTableInBundle(@"Clear Token", nil, KB_MAIN_BUNDLE, nil);
+            NSString * lblClearTokenMsg   = NSLocalizedStringFromTableInBundle(@"Twitter access token cleared.", nil, KB_MAIN_BUNDLE, nil);
+            NSString * lblOK = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:lblClearTokenTitle message:lblClearTokenMsg delegate:nil cancelButtonTitle:lblOK otherButtonTitles: nil];
             [alert show];
         }
@@ -560,18 +560,21 @@ typedef NS_ENUM(NSInteger, kSimpleTwitterConstructorState) {
 ////////////////////////////////////////////////////////
 // Optional Simple Facebook Delegates
 - (void)simpleFacebookDidPost:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacebookAlertPostSuccess delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+    NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacebookAlertPostSuccess delegate:nil cancelButtonTitle:lblCancel otherButtonTitles:nil];
     [alert show];
 }
 
 - (void)simpleFacebookDidFail:(id)sender withHeaders:(NSDictionary *)headers {
     // Notify user
     if ( self.facebook.preloading ) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacbeookAlertLoginFail delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+        NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacbeookAlertLoginFail delegate:nil cancelButtonTitle:lblCancel otherButtonTitles:nil];
         [alert show];
     } else {
         // Standard error coming from FB
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacebookAlertPostFail delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles: nil];
+        NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleFacebookAlertTitle message:kSimpleFacebookAlertPostFail delegate:nil cancelButtonTitle:lblCancel otherButtonTitles: nil];
         [alert show];
     }
     
@@ -606,7 +609,8 @@ typedef NS_ENUM(NSInteger, kSimpleTwitterConstructorState) {
 
 - (void)simpleTwitterDidFail:(id)sender withHeaders:(NSDictionary*)headers {
     // Notify user
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:kSimpleTwitterAlertPostFail delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles: nil];
+    NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:kSimpleTwitterAlertPostFail delegate:nil cancelButtonTitle:lblCancel otherButtonTitles: nil];
     [alert show];
     
 #if _kSIMPLE_TWITTER_DEBUG
@@ -616,7 +620,8 @@ typedef NS_ENUM(NSInteger, kSimpleTwitterConstructorState) {
 }
 
 - (void)simpleTwitterDidPost:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:kSimpleTwitterAlertPostSuccess delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+    NSString * lblCancel = NSLocalizedStringFromTableInBundle(@"OK", nil, KB_MAIN_BUNDLE, nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kSimpleTwitterAlertTitle message:kSimpleTwitterAlertPostSuccess delegate:nil cancelButtonTitle:lblCancel otherButtonTitles:nil];
     [alert show];
 }
 

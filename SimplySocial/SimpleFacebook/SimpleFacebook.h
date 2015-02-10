@@ -41,13 +41,13 @@
 #define kSimpleFacebookPostImage                    @"https://graph.facebook.com/me/photos"
 
 // Users can redefine these as desired
-#define kSimpleFacebookAlertTitle                   NSLocalizedString(@"Facebook", nil)
-#define kSimpleFacbeookAlertLoginFail               NSLocalizedString(@"Could not load login screen.", nil)
-#define kSimpleFacebookAlertPostSuccess             NSLocalizedString(@"Post Successful!", nil)
-#define kSimpleFacebookAlertPostFail                NSLocalizedString(@"Post failed, please try again later.", nil)
-#define kSimpleFacebookAlertNoService               NSLocalizedString(@"Facebook Service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup.", nil)
-#define kSimpleFacebookExceptionAPITitle            NSLocalizedString(@"SimpleFacebook: Null API Exception", nil)
-#define kSimpleFacebookExceptionAPIMsg              NSLocalizedString(@"Please furnish an API key!", nil)
+#define kSimpleFacebookAlertTitle                   NSLocalizedStringFromTableInBundle(@"Facebook", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleFacbeookAlertLoginFail               NSLocalizedStringFromTableInBundle(@"Could not load login screen.", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleFacebookAlertPostSuccess             NSLocalizedStringFromTableInBundle(@"Post Successful!", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleFacebookAlertPostFail                NSLocalizedStringFromTableInBundle(@"Post failed, please try again later.", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleFacebookAlertNoService               NSLocalizedStringFromTableInBundle(@"Facebook Service is not available, make sure your device has an Internet connection and you have at least one Twitter account setup.", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleFacebookExceptionAPITitle            NSLocalizedStringFromTableInBundle(@"SimpleFacebook: Null API Exception", nil, KB_MAIN_BUNDLE, nil)
+#define kSimpleFacebookExceptionAPIMsg              NSLocalizedStringFromTableInBundle(@"Please furnish an API key!", nil, KB_MAIN_BUNDLE, nil)
 
 #pragma mark - SimpleFacebook Protocol
 
