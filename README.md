@@ -7,6 +7,24 @@ SimplySocial is a brutally simple collection of classes for connecting to Facebo
 
 SimplySocial only connects with Facebook and Twitter, and it does not provide full API support for either of these services. Rather, the design philosophy behind SimplySocial is KISS -- keep things as brutally simple as possible. SimplySocial accordingly provides its own OAuth implementation which (only) allows users to post text, URLs and images to the two major social networking sites. The posting of text, URLs and images to the two major social networking sites is the only "social networking requirement" for probably over 90% of all mobile projects. Consequently, additional API support is unnecessary for the majority of mobile users and programmers, would needlessly clutter and bloat Xcode projects by forcing linking with otherwise unused Frameworks, and runs contrary to KISS. The full social APIs are therefore deliberately left unimplemented.
 
+Compiling
+--------- 
+
+SimplySocial links with other projects as submodules. 
+
+In order to compile the project, type the following at the command line after you've cloned it:
+
+<pre>
+&gt; git submodule init
+&gt; git submodule update
+</pre>
+
+or alternatively, you can simply type:
+
+<pre>
+&gt; git subupdate update --init
+</pre>
+
 Use Cases
 --------- 
 
