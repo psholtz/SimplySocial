@@ -152,4 +152,11 @@ Version History
 <li>Initial release.</li>
 </ul>
 
+**Version 1.1** @ February 11, 2015
+<ul>
+<li>Support for iOS7, iOS8.</li>
+<li>Support for git submodules, where applicable.</li>
+<li>Other minor updates.</li>
+</ul>
+
 *Produced in cooperation with [Dae Myung](https://github.com/myung).*
