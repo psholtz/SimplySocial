@@ -147,16 +147,16 @@ To turn the gratuitous sound effect feature off, just set the compiler flag abov
 Version History
 --------------- 
 
-**Version 1.0** @ April 2, 2013
-<ul>
-<li>Initial release.</li>
-</ul>
-
 **Version 1.1** @ February 11, 2015
 <ul>
 <li>Support for iOS7, iOS8.</li>
 <li>Support for git submodules, where applicable.</li>
 <li>Other minor updates.</li>
+</ul>
+
+**Version 1.0** @ April 2, 2013
+<ul>
+<li>Initial release.</li>
 </ul>
 
 *Produced in cooperation with [Dae Myung](https://github.com/myung).*
